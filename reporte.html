@@ -863,8 +863,9 @@ new Chart(document.getElementById('chartRevenue'), {
   const pct = (used, total) => total > 0 ? Math.min(100, (used / total) * 100) : 0;
 
   try {
+    const MES_ORDER = ['enero/2026','febrero/2026','marzo/2026','abril/2026','mayo/2026','junio/2026','julio/2026','agosto/2026','septiembre/2026','octubre/2026','noviembre/2026','diciembre/2026'];
     const [{ data: config }, { data: casos }] = await Promise.all([
-      db.from('bolsa_config').select('mes, monto_bolsa').order('mes'),
+      db.from('bolsa_config').select('mes, monto_bolsa'),
       db.from('casos').select('mes_entrega, valor_entregado').eq('estado', 'aprobado')
     ]);
 
@@ -875,6 +876,7 @@ new Chart(document.getElementById('chartRevenue'), {
     });
 
     let totalPresupuesto = 0, totalGastado = 0;
+    config.sort((a, b) => MES_ORDER.indexOf(a.mes) - MES_ORDER.indexOf(b.mes));
     const rows = (config || []).map(m => {
       const gastado = gastoMes[m.mes] || 0;
       const p = pct(gastado, m.monto_bolsa);
