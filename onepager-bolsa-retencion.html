@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolsa de Retención BIA Energy — One Pager</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f5;
+      color: #1a1a2e;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+
+    /* HEADER */
+    header {
+      background: #1a1a2e;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .brand { display: flex; align-items: center; gap: 14px; }
+    header .logo-icon {
+      width: 44px; height: 44px;
+      background: #00d4aa;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    header .brand-text .name {
+      font-size: 20px; font-weight: 800; color: #00d4aa; letter-spacing: 1px;
+    }
+    header .brand-text .sub {
+      font-size: 13px; color: #8888aa; margin-top: 2px;
+    }
+    header .date {
+      font-size: 13px; color: #8888aa;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 40px 40px 32px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 10px;
+    }
+    .hero h1 span { color: #00d4aa; }
+    .hero p {
+      font-size: 15px; color: #aaaacc; max-width: 600px; margin: 0 auto;
+    }
+
+    /* BADGES */
+    .badges {
+      display: flex; justify-content: center; gap: 12px;
+      padding: 18px 40px; background: #16213e; flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(0,212,170,0.12);
+      border: 1px solid rgba(0,212,170,0.3);
+      color: #00d4aa;
+      font-size: 12px; font-weight: 600;
+      padding: 5px 14px; border-radius: 20px;
+    }
+
+    /* CONTENT */
+    .content { padding: 36px 40px; }
+
+    /* INFO TABLE */
+    .info-table {
+      width: 100%; border-collapse: collapse; margin-bottom: 32px;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .info-table tr:nth-child(even) td:first-child { background: #f5f5fa; }
+    .info-table tr:nth-child(odd) td:first-child { background: #eeeef7; }
+    .info-table td {
+      padding: 10px 16px; font-size: 13px;
+      border-bottom: 1px solid #ebebf5;
+    }
+    .info-table td:first-child {
+      font-weight: 600; width: 200px; color: #1a1a2e;
+    }
+    .info-table td:last-child { color: #444; }
+    .info-table a { color: #6c63ff; text-decoration: none; }
+
+    /* SECTION */
+    .section { margin-bottom: 28px; }
+    .section-title {
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 6px;
+      margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title span { color: #00d4aa; font-size: 16px; }
+
+    /* BULLETS */
+    .bullets { list-style: none; }
+    .bullets li {
+      font-size: 14px; color: #333; padding: 5px 0 5px 20px;
+      position: relative; border-bottom: 1px solid #f0f0f5;
+    }
+    .bullets li:last-child { border-bottom: none; }
+    .bullets li::before {
+      content: "▸";
+      color: #00d4aa; font-size: 12px;
+      position: absolute; left: 0; top: 6px;
+    }
+
+    /* PROBLEM/SOLUTION TABLE */
+    .ps-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .ps-table thead tr { background: #1a1a2e; }
+    .ps-table thead th {
+      padding: 10px 16px; text-align: left;
+      font-size: 13px; font-weight: 600; color: #fff;
+    }
+    .ps-table tbody tr:nth-child(even) { background: #fafafa; }
+    .ps-table tbody tr:hover { background: #f0faf8; }
+    .ps-table td {
+      padding: 10px 16px; font-size: 13px;
+      border-bottom: 1px solid #ebebf5; vertical-align: top;
+    }
+    .ps-table td:first-child { color: #666; width: 38%; }
+    .ps-table td:last-child { color: #1a1a2e; font-weight: 500; }
+    .ps-table .tag {
+      display: inline-block;
+      background: #e6faf7; color: #007a63;
+      font-size: 11px; font-weight: 600;
+      padding: 2px 8px; border-radius: 10px; margin-right: 6px;
+    }
+
+    /* VENTAJAS CARDS */
+    .cards {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    }
+    .card {
+      background: #e6faf7;
+      border: 1px solid #b2ede3;
+      border-radius: 10px; padding: 16px;
+    }
+    .card .card-icon { font-size: 22px; margin-bottom: 8px; }
+    .card .card-title {
+      font-size: 13px; font-weight: 700; color: #007a63; margin-bottom: 6px;
+    }
+    .card .card-desc { font-size: 12px; color: #444; line-height: 1.5; }
+
+    /* ESTADO ACTUAL */
+    .estado-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+    }
+    .estado-item {
+      background: #f5f5fa;
+      border-left: 4px solid #00d4aa;
+      border-radius: 6px; padding: 12px 14px;
+    }
+    .estado-item .num {
+      font-size: 22px; font-weight: 800; color: #1a1a2e;
+    }
+    .estado-item .label {
+      font-size: 12px; color: #666; margin-top: 2px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a2e;
+      padding: 16px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer p { font-size: 12px; color: #8888aa; }
+    footer .confidential {
+      background: rgba(0,212,170,0.15);
+      color: #00d4aa; font-size: 11px; font-weight: 600;
+      padding: 4px 12px; border-radius: 12px;
+    }
+
+    /* IMPACTO EN TIEMPO */
+    .tiempo-grid {
+      display: flex; align-items: center; gap: 20px;
+    }
+    .tiempo-card {
+      flex: 1; border-radius: 10px; padding: 24px; text-align: center;
+    }
+    .tiempo-card.antes {
+      background: #fff3f3; border: 2px solid #ffb3b3;
+    }
+    .tiempo-card.despues {
+      background: #e6faf7; border: 2px solid #00d4aa;
+    }
+    .tiempo-label {
+      font-size: 12px; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 1px; color: #888; margin-bottom: 10px;
+    }
+    .tiempo-num {
+      font-size: 48px; font-weight: 800; line-height: 1;
+      margin-bottom: 10px;
+    }
+    .tiempo-card.antes .tiempo-num { color: #e05555; }
+    .tiempo-card.despues .tiempo-num { color: #00a884; }
+    .tiempo-desc {
+      font-size: 12px; color: #666; line-height: 1.5;
+    }
+    .tiempo-flecha {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .flecha-icon {
+      font-size: 32px; color: #1a1a2e; font-weight: 800;
+    }
+    .ahorro-badge {
+      background: #1a1a2e; color: #00d4aa;
+      font-size: 12px; font-weight: 700;
+      padding: 5px 14px; border-radius: 20px; white-space: nowrap;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="logo-icon">⚡</div>
+      <div class="brand-text">
+        <div class="name">BIA ENERGY</div>
+        <div class="sub">Bolsa de Retención — One Pager</div>
+      </div>
+    </div>
+    <div class="date">Mayo 2026</div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Bolsa de <span>Retención</span> BIA Energy</h1>
+    <p>Plataforma digital interna para la gestión, registro y seguimiento de casos de retención de clientes con control ejecutivo en tiempo real.</p>
+  </div>
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge">React + Supabase</span>
+    <span class="badge">Lovable</span>
+    <span class="badge">3.493 Clientes</span>
+    <span class="badge">Bolsa $35M / $15M mensual</span>
+    <span class="badge">Vista Agente + Vista Ejecutiva</span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- INFO GENERAL -->
+    <table class="info-table">
+      <tr><td>Empresa</td><td>BIA Energy</td></tr>
+      <tr><td>Tipo de proyecto</td><td>Aplicación web interna (React + Supabase)</td></tr>
+      <tr><td>Despliegue</td><td>Lovable — bolsa-retencion-app</td></tr>
+      <tr><td>Repositorio</td><td><a href="https://github.com/damariscastaneda-boop/bolsa-retencion-app">github.com/damariscastaneda-boop/bolsa-retencion-app</a></td></tr>
+      <tr><td>Base de datos</td><td>Supabase — tablas: clientes, casos, bolsa_config</td></tr>
+      <tr><td>Fecha de entrega</td><td>Mayo 2026</td></tr>
+    </table>
+
+    <!-- OBJETIVO -->
+    <div class="section">
+      <div class="section-title"><span>🎯</span> Objetivo</div>
+      <ul class="bullets">
+        <li>Digitalizar y centralizar la gestión de casos de retención de clientes en riesgo de churn.</li>
+        <li>Proveer trazabilidad completa de cada caso: agente, cliente, sede, compensación, notas y estado.</li>
+        <li>Dar visibilidad ejecutiva sobre el uso de la bolsa mensual y el desempeño del equipo de retención.</li>
+      </ul>
+    </div>
+
+    <!-- NECESIDAD -->
+    <div class="section">
+      <div class="section-title"><span>⚠️</span> Necesidad</div>
+      <ul class="bullets">
+        <li>El proceso se manejaba con hojas de cálculo y un Apps Script con bugs críticos que impedían ver los casos pendientes en la vista ejecutiva.</li>
+        <li>Sin control sobre cuántas veces se compensaba un mismo cliente, generando costos innecesarios.</li>
+        <li>Los agentes no tenían una interfaz clara para registrar casos con toda la información relevante.</li>
+        <li>La bolsa mensual no tenía seguimiento ni visibilidad ejecutiva en tiempo real.</li>
+      </ul>
+    </div>
+
+    <!-- PROCESO -->
+    <div class="section">
+      <div class="section-title"><span>🔧</span> Proceso de Desarrollo</div>
+      <ul class="bullets">
+        <li>Diagnóstico del Apps Script original e identificación del bug en <code style="background:#f0f0f5;padding:1px 5px;border-radius:3px;font-size:12px">renderPending</code>.</li>
+        <li>Decisión de migrar a React + Supabase en Lovable para mayor escalabilidad.</li>
+        <li>Diseño de base de datos: se eliminó el constraint UNIQUE en clientes para permitir múltiples sedes por <code style="background:#f0f0f5;padding:1px 5px;border-radius:3px;font-size:12px">company_id</code> y se eliminó la FK <code style="background:#f0f0f5;padding:1px 5px;border-radius:3px;font-size:12px">casos_company_id_fkey</code>.</li>
+        <li>Carga de 3.493 registros de clientes y 30 casos históricos (enero–abril 2026).</li>
+        <li>Construcción de Vista Agente con búsqueda, perfil agregado por empresa y formulario de casos.</li>
+        <li>Construcción de Vista Ejecutiva con KPIs, aprobación/rechazo, histórico, exportación CSV y alertas.</li>
+        <li>Iteración de mejoras de UX: colores BIA, meses futuros, campo Excluidos eliminado, notas obligatorias.</li>
+      </ul>
+    </div>
+
+    <!-- CÓMO SE SOLUCIONÓ -->
+    <div class="section">
+      <div class="section-title"><span>✅</span> Cómo se Solucionó</div>
+      <table class="ps-table">
+        <thead>
+          <tr><th>Problema</th><th>Solución aplicada</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bug renderPending en Apps Script</td>
+            <td><span class="tag">Migración</span>React + Supabase con lógica de consulta correcta</td>
+          </tr>
+          <tr>
+            <td>Clientes con múltiples sedes duplicaban datos</td>
+            <td><span class="tag">BD</span>Agregación por company_id sumando kwh, revenue y c_b</td>
+          </tr>
+          <tr>
+            <td>Sin control de compensaciones repetidas</td>
+            <td><span class="tag">Alerta</span>Banner naranja si el cliente fue compensado en los últimos 12 meses</td>
+          </tr>
+          <tr>
+            <td>Mes de entrega solo mostraba meses pasados</td>
+            <td><span class="tag">UX</span>Selector habilitado para meses futuros</td>
+          </tr>
+          <tr>
+            <td>Campo Excluidos generaba confusión</td>
+            <td><span class="tag">UX</span>Campo eliminado completamente del formulario</td>
+          </tr>
+          <tr>
+            <td>Notas del agente se omitían frecuentemente</td>
+            <td><span class="tag">Validación</span>Campo obligatorio — no permite envío sin completarlo</td>
+          </tr>
+          <tr>
+            <td>Sin identidad visual de BIA Energy</td>
+            <td><span class="tag">Diseño</span>Paleta oklch aplicada: header #1a1a2e, acento #00d4aa</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- VENTAJAS -->
+    <div class="section">
+      <div class="section-title"><span>🚀</span> Ventajas y Beneficios</div>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <div class="card-title">Trazabilidad total</div>
+          <div class="card-desc">Cada caso registrado con agente, fecha, sede, monto y notas obligatorias.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔐</div>
+          <div class="card-title">Control ejecutivo</div>
+          <div class="card-desc">Vista con PIN exclusivo para aprobar, rechazar y monitorear la bolsa mensual.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🔔</div>
+          <div class="card-title">Alerta de duplicados</div>
+          <div class="card-desc">Detecta clientes compensados más de una vez en los últimos 12 meses.</div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">Escalable</div>
+          <div class="card-desc">React + Supabase permite agregar módulos sin afectar la lógica existente.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTADO ACTUAL -->
+    <div class="section">
+      <div class="section-title"><span>📊</span> Estado Actual — Mayo 2026</div>
+      <div class="estado-grid">
+        <div class="estado-item">
+          <div class="num">3.493</div>
+          <div class="label">Clientes cargados con soporte multisede</div>
+        </div>
+        <div class="estado-item">
+          <div class="num">30</div>
+          <div class="label">Casos históricos (ene–abr 2026) cargados</div>
+        </div>
+        <div class="estado-item">
+          <div class="num">$35M / $15M</div>
+          <div class="label">Bolsa mensual ene–abr / may en adelante</div>
+        </div>
+        <div class="estado-item">
+          <div class="num">2 vistas</div>
+          <div class="label">Vista Agente + Vista Ejecutiva (PIN: 2026)</div>
+        </div>
+        <div class="estado-item">
+          <div class="num">100%</div>
+          <div class="label">Identidad visual BIA Energy aplicada</div>
+        </div>
+        <div class="estado-item">
+          <div class="num">✔ Live</div>
+          <div class="label">Aplicación desplegada y funcional en Lovable</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IMPACTO EN TIEMPO -->
+    <div class="section">
+      <div class="section-title"><span>⏱️</span> Impacto en Tiempo</div>
+      <div class="tiempo-grid">
+        <div class="tiempo-card antes">
+          <div class="tiempo-label">Antes de la automatización</div>
+          <div class="tiempo-num">90 min</div>
+          <div class="tiempo-desc">Proceso manual en hojas de cálculo, sin trazabilidad ni validaciones</div>
+        </div>
+        <div class="tiempo-flecha">
+          <div class="flecha-icon">→</div>
+          <div class="ahorro-badge">-83% tiempo</div>
+        </div>
+        <div class="tiempo-card despues">
+          <div class="tiempo-label">Con la automatización</div>
+          <div class="tiempo-num">15 min</div>
+          <div class="tiempo-desc">Registro digital, validaciones automáticas y aprobación ejecutiva en tiempo real</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Confidencial — Uso interno BIA Energy</p>
+    <span class="confidential">CONFIDENCIAL</span>
+  </footer>
+
+</div>
+</body>
+</html>

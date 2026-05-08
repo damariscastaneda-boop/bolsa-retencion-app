@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Pager — Recargos CX · BIA Energy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f5;
+      color: #1a1a2e;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+
+    /* HEADER */
+    header {
+      background: #1a1a2e;
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    header .brand { display: flex; align-items: center; gap: 14px; }
+    header .logo-icon {
+      width: 44px; height: 44px; background: #00d4aa;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    header .brand-text .name { font-size: 20px; font-weight: 800; color: #00d4aa; letter-spacing: 1px; }
+    header .brand-text .sub { font-size: 13px; color: #8888aa; margin-top: 2px; }
+    header .meta { text-align: right; }
+    header .meta .status {
+      background: rgba(0,212,170,0.15); color: #00d4aa;
+      font-size: 12px; font-weight: 600;
+      padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 4px;
+    }
+    header .meta .date { font-size: 12px; color: #8888aa; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 40px 40px 32px; text-align: center;
+    }
+    .hero h1 { font-size: 30px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+    .hero h1 span { color: #00d4aa; }
+    .hero p { font-size: 15px; color: #aaaacc; max-width: 640px; margin: 0 auto; }
+
+    /* BADGES */
+    .badges {
+      display: flex; justify-content: center; gap: 12px;
+      padding: 18px 40px; background: #16213e; flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
+      color: #00d4aa; font-size: 12px; font-weight: 600;
+      padding: 5px 14px; border-radius: 20px;
+    }
+
+    /* CONTENT */
+    .content { padding: 36px 40px; }
+
+    .section { margin-bottom: 28px; }
+    .section-title {
+      background: #1a1a2e; color: #fff;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 6px; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title span { color: #00d4aa; font-size: 16px; }
+
+    /* BOXES */
+    .box { border-radius: 10px; padding: 16px 20px; }
+    .box p { font-size: 14px; line-height: 1.7; color: #333; }
+    .box p strong { color: #1a1a2e; }
+    .box-objetivo { background: #e6faf7; border-left: 4px solid #00d4aa; }
+
+    /* TWO COLUMNS */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+
+    /* BULLETS */
+    .bullets { list-style: none; }
+    .bullets li {
+      font-size: 14px; color: #333; padding: 5px 0 5px 20px;
+      position: relative; border-bottom: 1px solid #f0f0f5;
+    }
+    .bullets li:last-child { border-bottom: none; }
+    .bullets li::before { content: "▸"; color: #00d4aa; font-size: 12px; position: absolute; left: 0; top: 6px; }
+
+    /* GENERAL TABLE */
+    .g-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .g-table thead tr { background: #1a1a2e; }
+    .g-table thead th {
+      padding: 10px 14px; text-align: left;
+      font-size: 12px; font-weight: 700; color: #fff; letter-spacing: 0.5px;
+    }
+    .g-table thead th:first-child { color: #00d4aa; }
+    .g-table tbody tr:nth-child(even) { background: #fafafa; }
+    .g-table tbody tr:hover { background: #f0faf8; }
+    .g-table td {
+      padding: 9px 14px; font-size: 13px;
+      border-bottom: 1px solid #ebebf5; vertical-align: top;
+    }
+    .g-table td:first-child { font-weight: 600; color: #1a1a2e; }
+
+    /* INFO TABLE (key-value) */
+    .info-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .info-table tr:nth-child(even) td:first-child { background: #f5f5fa; }
+    .info-table tr:nth-child(odd) td:first-child { background: #eeeef7; }
+    .info-table td { padding: 9px 14px; font-size: 13px; border-bottom: 1px solid #ebebf5; }
+    .info-table td:first-child { font-weight: 600; width: 200px; color: #1a1a2e; }
+    .info-table td:last-child { color: #444; }
+    .info-table a { color: #00a884; text-decoration: none; font-weight: 600; }
+
+    /* SCOPE TABLE */
+    .scope-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .scope-table thead th {
+      padding: 10px 16px; font-size: 12px; font-weight: 700; text-align: left;
+    }
+    .scope-table thead th:first-child { background: #e6faf7; color: #007a63; width: 50%; }
+    .scope-table thead th:last-child { background: #fff3f3; color: #c44; }
+    .scope-table td {
+      padding: 8px 16px; font-size: 13px; vertical-align: top;
+      border-bottom: 1px solid #f0f0f5;
+    }
+    .scope-table td:first-child { background: #f7fffe; color: #1a1a2e; }
+    .scope-table td:last-child { background: #fffafa; color: #555; }
+    .scope-table td::before { margin-right: 6px; }
+    .scope-table td:first-child::before { content: "✓"; color: #00d4aa; font-weight: 700; }
+    .scope-table td:last-child::before { content: "✗"; color: #e05555; font-weight: 700; }
+
+    /* RECARGO TAGS */
+    .recargo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .recargo-item {
+      background: #e6faf7; border: 1px solid #b2ede3;
+      border-radius: 8px; padding: 9px 14px;
+      font-size: 13px; color: #1a1a2e; font-weight: 500;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .recargo-num {
+      background: #1a1a2e; color: #00d4aa;
+      font-size: 11px; font-weight: 700;
+      width: 22px; height: 22px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+
+    /* FUNCIONALIDADES */
+    .func-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .func-table thead tr { background: #1a1a2e; }
+    .func-table thead th {
+      padding: 10px 14px; text-align: left;
+      font-size: 12px; font-weight: 700; color: #fff;
+    }
+    .func-table thead th:first-child { color: #00d4aa; width: 15%; }
+    .func-table thead th:nth-child(2) { width: 42%; }
+    .func-table tbody tr:nth-child(even) { background: #fafafa; }
+    .func-table td {
+      padding: 9px 14px; font-size: 12px;
+      border-bottom: 1px solid #ebebf5; vertical-align: top; line-height: 1.5;
+    }
+    .func-table td:first-child { font-weight: 700; color: #007a63; }
+
+    /* ESTADO BADGES */
+    .estado-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .estado-badge {
+      background: #e6faf7; border: 1.5px solid #00d4aa;
+      color: #007a63; font-size: 13px; font-weight: 700;
+      padding: 10px 20px; border-radius: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* TIEMPO */
+    .tiempo-grid { display: flex; align-items: center; gap: 20px; }
+    .tiempo-card { flex: 1; border-radius: 10px; padding: 24px; text-align: center; }
+    .tiempo-card.antes { background: #fff3f3; border: 2px solid #ffb3b3; }
+    .tiempo-card.despues { background: #e6faf7; border: 2px solid #00d4aa; }
+    .tiempo-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 10px; }
+    .tiempo-num { font-size: 48px; font-weight: 800; line-height: 1; margin-bottom: 6px; }
+    .tiempo-card.antes .tiempo-num { color: #e05555; }
+    .tiempo-card.despues .tiempo-num { color: #00a884; }
+    .tiempo-sub { font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+    .tiempo-card.antes .tiempo-sub { color: #c44; }
+    .tiempo-card.despues .tiempo-sub { color: #007a63; }
+    .tiempo-desc { font-size: 12px; color: #666; line-height: 1.5; }
+    .tiempo-flecha { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .flecha-icon { font-size: 32px; color: #1a1a2e; font-weight: 800; }
+    .ahorro-badge {
+      background: #1a1a2e; color: #00d4aa;
+      font-size: 12px; font-weight: 700;
+      padding: 5px 14px; border-radius: 20px; white-space: nowrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a2e; padding: 16px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer p { font-size: 12px; color: #8888aa; }
+    footer .confidential {
+      background: rgba(0,212,170,0.15); color: #00d4aa;
+      font-size: 11px; font-weight: 600;
+      padding: 4px 12px; border-radius: 12px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="logo-icon">⚡</div>
+      <div class="brand-text">
+        <div class="name">BIA ENERGY</div>
+        <div class="sub">Recargos CX — Gestión de Recargos y Horas Extras de Nómina</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="status">✅ Implementado · Operativo</div>
+      <div class="date">Contact Center · Mayo 2026</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Aplicación Web <span>Recargos CX</span></h1>
+    <p>Plataforma digital corporativa para el registro, aprobación y exportación de recargos y horas extras de nómina del contact center de BIA Energy.</p>
+  </div>
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge">React + TypeScript</span>
+    <span class="badge">Supabase + PostgreSQL</span>
+    <span class="badge">Google OAuth @bia.app</span>
+    <span class="badge">Lovable.dev</span>
+    <span class="badge">Exportación Excel</span>
+    <span class="badge">recargo-flow.lovable.app</span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- OBJETIVO -->
+    <div class="section">
+      <div class="section-title"><span>🎯</span> Objetivo</div>
+      <div class="box box-objetivo">
+        <p>Desarrollar una aplicación web corporativa para que los empleados del contact center registren digitalmente sus recargos y horas extras de nómina, <strong>reemplazando el proceso manual en Google Drive</strong>. Los líderes pueden aprobar o rechazar registros y exportar la información directamente al área de nómina para garantizar el pago oportuno.</p>
+      </div>
+    </div>
+
+    <!-- NECESIDAD Y ALCANCE -->
+    <div class="section two-col">
+      <div>
+        <div class="section-title"><span>⚠️</span> Contexto y Necesidad</div>
+        <ul class="bullets">
+          <li>Proceso 100% manual en Google Drive, propenso a errores.</li>
+          <li>Sin trazabilidad de aprobaciones ni historial por empleado.</li>
+          <li>Nómina recibía información sin formato estandarizado.</li>
+          <li>Líderes sin visibilidad consolidada de horas extras.</li>
+          <li>Se requería acceso restringido al dominio @bia.app.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title"><span>📋</span> Alcance</div>
+        <table class="scope-table">
+          <thead>
+            <tr><th>Incluido</th><th>Fuera del alcance</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>7 tipos de recargo/hora extra</td><td>Integración SAP/SIIGO</td></tr>
+            <tr><td>Flujo de aprobación por líder</td><td>App móvil nativa</td></tr>
+            <tr><td>Dashboard empleado y panel líder</td><td>Cálculo en pesos</td></tr>
+            <tr><td>Exportación Excel para nómina</td><td>Módulo de vacaciones</td></tr>
+            <tr><td>Autenticación Google @bia.app</td><td>Reportes multiperiodo</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- STACK TECNOLÓGICO -->
+    <div class="section">
+      <div class="section-title"><span>🛠️</span> Stack Tecnológico</div>
+      <table class="g-table">
+        <thead>
+          <tr><th>Componente</th><th>Tecnología</th><th>Componente</th><th>Tecnología</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Frontend</td><td>React + TypeScript + Tailwind</td><td>Autenticación</td><td>Supabase Auth + Google OAuth</td></tr>
+          <tr><td>Base de Datos</td><td>Supabase (PostgreSQL)</td><td>Exportación Excel</td><td>SheetJS (xlsx)</td></tr>
+          <tr><td>Seguridad</td><td>Row Level Security (RLS)</td><td>UI Components</td><td>shadcn/ui</td></tr>
+          <tr><td>Deploy / Hosting</td><td>Lovable.dev</td><td>URL Producción</td><td><a href="https://recargo-flow.lovable.app">recargo-flow.lovable.app</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FUNCIONALIDADES -->
+    <div class="section">
+      <div class="section-title"><span>⚙️</span> Funcionalidades Desarrolladas</div>
+      <table class="func-table">
+        <thead>
+          <tr><th>Módulo</th><th>Empleado</th><th>Líder</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Autenticación</td>
+            <td>Login exclusivo con cuenta Google @bia.app. Perfil creado automáticamente. Cédula obligatoria al primer login.</td>
+            <td>Mismo flujo. Rol de líder asignado en base de datos.</td>
+          </tr>
+          <tr>
+            <td>Dashboard</td>
+            <td>Saludo personalizado, 4 tarjetas resumen (horas, pendientes, aprobados, rechazados), tabla del mes con filtro.</td>
+            <td>Estadísticas del equipo, tabla con filtros por empleado y mes, resumen de horas por empleado.</td>
+          </tr>
+          <tr>
+            <td>Registro</td>
+            <td>Formulario con fecha, hora inicio/fin, 7 tipos de recargo con campos progresivos, descripción obligatoria y desplegable de líder.</td>
+            <td>No aplica (rol de aprobación únicamente).</td>
+          </tr>
+          <tr>
+            <td>Aprobación</td>
+            <td>Ve estado de cada registro: Pendiente / Aprobado / Rechazado con badges de color.</td>
+            <td>Botones Aprobar / Rechazar con campo de comentario opcional.</td>
+          </tr>
+          <tr>
+            <td>Reportes</td>
+            <td>Historial personal filtrable por mes.</td>
+            <td>Resumen por empleado con totales por tipo. Exportación Excel con 17 columnas exactas para nómina.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- TIPOS DE RECARGO -->
+    <div class="section">
+      <div class="section-title"><span>📊</span> Tipos de Recargo Soportados</div>
+      <div class="recargo-grid">
+        <div class="recargo-item"><span class="recargo-num">1</span>Horas extras diurnas</div>
+        <div class="recargo-item"><span class="recargo-num">2</span>Horas extras nocturnas</div>
+        <div class="recargo-item"><span class="recargo-num">3</span>Horas extra dominicales o festivas diurnas</div>
+        <div class="recargo-item"><span class="recargo-num">4</span>Horas extra dominicales o festivas nocturnas</div>
+        <div class="recargo-item"><span class="recargo-num">5</span>Recargo nocturno</div>
+        <div class="recargo-item"><span class="recargo-num">6</span>Recargo dominical o festivo diurno</div>
+        <div class="recargo-item"><span class="recargo-num">7</span>Recargo dominical o festivo nocturno</div>
+      </div>
+    </div>
+
+    <!-- INFRAESTRUCTURA -->
+    <div class="section">
+      <div class="section-title"><span>🔧</span> Infraestructura y Configuración</div>
+      <table class="info-table">
+        <tr><td>Supabase</td><td>Proyecto recargos-cx · Región: Oeste de Estados Unidos (Oregón)</td></tr>
+        <tr><td>Google Cloud</td><td>Proyecto recargos-cx · OAuth 2.0 restringido al dominio @bia.app · Tipo: Interno</td></tr>
+        <tr><td>URL de producción</td><td><a href="https://recargo-flow.lovable.app">recargo-flow.lovable.app</a></td></tr>
+        <tr><td>Seguridad BD</td><td>Row Level Security (RLS) activo en todas las tablas</td></tr>
+      </table>
+    </div>
+
+    <!-- IMPACTO EN TIEMPO -->
+    <div class="section">
+      <div class="section-title"><span>⏱️</span> Impacto en Tiempo</div>
+      <div class="tiempo-grid">
+        <div class="tiempo-card antes">
+          <div class="tiempo-label">Antes de la automatización</div>
+          <div class="tiempo-num">2–3 h</div>
+          <div class="tiempo-sub">Por informe mensual</div>
+          <div class="tiempo-desc">Consolidación manual en Google Drive, sin trazabilidad ni formato estándar. Riesgo de errores y retrasos en el pago de nómina.</div>
+        </div>
+        <div class="tiempo-flecha">
+          <div class="flecha-icon">→</div>
+          <div class="ahorro-badge">-97% tiempo</div>
+        </div>
+        <div class="tiempo-card despues">
+          <div class="tiempo-label">Con la aplicación</div>
+          <div class="tiempo-num">5 min</div>
+          <div class="tiempo-sub">Exportación inmediata</div>
+          <div class="tiempo-desc">El informe para nómina se genera con un clic. 17 columnas exactas listas para procesar, con datos validados y aprobados.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTADO -->
+    <div class="section">
+      <div class="section-title"><span>🚀</span> Estado Actual</div>
+      <div class="estado-row">
+        <div class="estado-badge">✅ Implementado</div>
+        <div class="estado-badge">✅ Operativo</div>
+        <div class="estado-badge">✅ Seguridad RLS activa</div>
+        <div class="estado-badge">✅ Google OAuth @bia.app</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Aplicación web corporativa · BIA Energy · Contact Center · <strong style="color:#ccd;">recargo-flow.lovable.app</strong></p>
+    <span class="confidential">CONFIDENCIAL</span>
+  </footer>
+
+</div>
+</body>
+</html>

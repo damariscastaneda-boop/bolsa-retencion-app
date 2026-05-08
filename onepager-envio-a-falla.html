@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One Pager — Automatización Alertas Envío a Falla · BIA Energy</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f0f0f5;
+      color: #1a1a2e;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 32px auto;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+    }
+
+    /* HEADER */
+    header {
+      background: #1a1a2e;
+      padding: 24px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    header .brand { display: flex; align-items: center; gap: 14px; }
+    header .logo-icon {
+      width: 44px; height: 44px; background: #00d4aa;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    header .brand-text .name { font-size: 20px; font-weight: 800; color: #00d4aa; letter-spacing: 1px; }
+    header .brand-text .sub { font-size: 13px; color: #8888aa; margin-top: 2px; }
+    header .meta { text-align: right; }
+    header .meta .status {
+      background: rgba(0,212,170,0.15); color: #00d4aa;
+      font-size: 12px; font-weight: 600;
+      padding: 4px 12px; border-radius: 20px; display: inline-block; margin-bottom: 4px;
+    }
+    header .meta .date { font-size: 12px; color: #8888aa; }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      padding: 40px 40px 32px; text-align: center;
+    }
+    .hero h1 { font-size: 30px; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.3; }
+    .hero h1 span { color: #00d4aa; }
+    .hero p { font-size: 15px; color: #aaaacc; max-width: 600px; margin: 0 auto; }
+
+    /* BADGES */
+    .badges {
+      display: flex; justify-content: center; gap: 12px;
+      padding: 18px 40px; background: #16213e; flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(0,212,170,0.12); border: 1px solid rgba(0,212,170,0.3);
+      color: #00d4aa; font-size: 12px; font-weight: 600;
+      padding: 5px 14px; border-radius: 20px;
+    }
+
+    /* CONTENT */
+    .content { padding: 36px 40px; }
+
+    .section { margin-bottom: 28px; }
+    .section-title {
+      background: #1a1a2e; color: #fff;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 8px 16px; border-radius: 6px; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section-title span { color: #00d4aa; font-size: 16px; }
+
+    /* BOXES */
+    .box { border-radius: 10px; padding: 16px 20px; }
+    .box p { font-size: 14px; line-height: 1.7; color: #333; }
+    .box p strong { color: #1a1a2e; }
+    .box-objetivo { background: #e6faf7; border-left: 4px solid #00d4aa; }
+    .box-problema { background: #fff3f3; border-left: 4px solid #e05555; }
+    .box-solucion { background: #f0fdf4; border-left: 4px solid #10b981; }
+
+    /* TWO COLUMNS */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    /* BULLETS */
+    .bullets { list-style: none; }
+    .bullets li {
+      font-size: 14px; color: #333; padding: 5px 0 5px 20px;
+      position: relative; border-bottom: 1px solid #f0f0f5;
+    }
+    .bullets li:last-child { border-bottom: none; }
+    .bullets li::before { content: "▸"; color: #00d4aa; font-size: 12px; position: absolute; left: 0; top: 6px; }
+
+    /* FLUJO */
+    .flow {
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    }
+    .flow-step {
+      background: #e6faf7; border: 1.5px solid #b2ede3;
+      border-radius: 10px; padding: 12px 14px;
+      text-align: center; font-size: 11px; color: #1a1a2e; font-weight: 600;
+      min-width: 110px; flex: 1;
+    }
+    .flow-step .step-icon { font-size: 18px; display: block; margin-bottom: 5px; }
+    .flow-arrow { font-size: 18px; color: #00d4aa; font-weight: 800; }
+
+    /* INFO TABLE */
+    .info-table {
+      width: 100%; border-collapse: collapse;
+      border-radius: 8px; overflow: hidden;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+    }
+    .info-table tr:nth-child(even) td:first-child { background: #f5f5fa; }
+    .info-table tr:nth-child(odd) td:first-child { background: #eeeef7; }
+    .info-table td { padding: 10px 16px; font-size: 13px; border-bottom: 1px solid #ebebf5; }
+    .info-table td:first-child { font-weight: 600; width: 220px; color: #1a1a2e; }
+    .info-table td:last-child { color: #444; }
+
+    /* IMPACTO CARDS */
+    .impacto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .impacto-card {
+      background: #e6faf7; border: 1px solid #b2ede3;
+      border-radius: 10px; padding: 16px;
+    }
+    .impacto-card .card-icon { font-size: 22px; margin-bottom: 8px; }
+    .impacto-card .card-title { font-size: 13px; font-weight: 700; color: #007a63; margin-bottom: 8px; }
+    .impacto-card .card-item {
+      font-size: 12px; color: #333; padding: 3px 0 3px 14px;
+      position: relative; line-height: 1.4;
+    }
+    .impacto-card .card-item::before { content: "▸"; color: #00d4aa; font-size: 10px; position: absolute; left: 0; top: 4px; }
+
+    /* ESTADO BADGES */
+    .estado-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .estado-badge {
+      background: #e6faf7; border: 1.5px solid #00d4aa;
+      color: #007a63; font-size: 13px; font-weight: 700;
+      padding: 10px 20px; border-radius: 8px;
+      display: flex; align-items: center; gap: 6px;
+    }
+
+    /* TIEMPO */
+    .tiempo-grid { display: flex; align-items: center; gap: 20px; }
+    .tiempo-card { flex: 1; border-radius: 10px; padding: 24px; text-align: center; }
+    .tiempo-card.antes { background: #fff3f3; border: 2px solid #ffb3b3; }
+    .tiempo-card.despues { background: #e6faf7; border: 2px solid #00d4aa; }
+    .tiempo-label { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: #888; margin-bottom: 10px; }
+    .tiempo-num { font-size: 28px; font-weight: 800; line-height: 1.2; margin-bottom: 6px; padding: 10px 0; }
+    .tiempo-card.antes .tiempo-num { color: #e05555; }
+    .tiempo-card.despues .tiempo-num { color: #00a884; }
+    .tiempo-desc { font-size: 12px; color: #666; line-height: 1.5; }
+    .tiempo-flecha { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .flecha-icon { font-size: 32px; color: #1a1a2e; font-weight: 800; }
+    .ahorro-badge {
+      background: #1a1a2e; color: #00d4aa;
+      font-size: 12px; font-weight: 700;
+      padding: 5px 14px; border-radius: 20px; white-space: nowrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1a1a2e; padding: 16px 40px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    footer p { font-size: 12px; color: #8888aa; }
+    footer .confidential {
+      background: rgba(0,212,170,0.15); color: #00d4aa;
+      font-size: 11px; font-weight: 600;
+      padding: 4px 12px; border-radius: 12px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <div class="logo-icon">⚡</div>
+      <div class="brand-text">
+        <div class="name">BIA ENERGY</div>
+        <div class="sub">Automatización Alertas "Envío a Falla" — One Pager</div>
+      </div>
+    </div>
+    <div class="meta">
+      <div class="status">✅ Implementado · Operativo · Escalable</div>
+      <div class="date">Área: Retención de Clientes · Mayo 2026</div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Alertas <span>"Envío a Falla"</span><br>→ Google Calendar</h1>
+    <p>Automatización de la detección de correos de falla y su conversión en alertas visibles en calendario compartido para activación operativa inmediata.</p>
+  </div>
+
+  <!-- BADGES -->
+  <div class="badges">
+    <span class="badge">Gmail</span>
+    <span class="badge">Google Apps Script</span>
+    <span class="badge">Google Calendar</span>
+    <span class="badge">Ejecución cada 5 min</span>
+    <span class="badge">Alertas Operativas</span>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- PROBLEMA Y SOLUCIÓN -->
+    <div class="section two-col">
+      <div>
+        <div class="section-title"><span>⚠️</span> Problema Identificado</div>
+        <div class="box box-problema">
+          <p>La identificación de fallas dependía de la <strong>revisión manual de correos</strong>, generando demoras en la reacción operativa, riesgo de incumplimiento del churn proyectado y baja visibilidad del equipo sobre incidencias críticas.</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-title"><span>💡</span> Solución Implementada</div>
+        <div class="box box-solucion">
+          <p>Se automatizó la detección de correos de falla y su conversión en alertas visibles en <strong>Google Calendar</strong>, usando <strong>Gmail</strong> + <strong>Google Apps Script</strong> para activar al equipo operativo de forma inmediata.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FLUJO -->
+    <div class="section">
+      <div class="section-title"><span>⚙️</span> ¿Cómo Funciona?</div>
+      <div class="flow">
+        <div class="flow-step"><span class="step-icon">📧</span>Correo con<br>"falla"</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="step-icon">🔍</span>Validación<br>automática</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="step-icon">🚨</span>Generación<br>de alerta</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="step-icon">📅</span>Visualización<br>en calendario</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><span class="step-icon">⚡</span>Activación<br>operativa</div>
+      </div>
+    </div>
+
+    <!-- TÉCNICO Y EVENTO -->
+    <div class="section two-col">
+      <div>
+        <div class="section-title"><span>🔎</span> Condiciones de Activación</div>
+        <table class="info-table">
+          <tr><td>Herramienta</td><td>Google Apps Script</td></tr>
+          <tr><td>Frecuencia</td><td>Cada 5 minutos</td></tr>
+          <tr><td>Condición</td><td>Correo no leído con palabra "falla"</td></tr>
+          <tr><td>Remitente autorizado</td><td>juanpablo.aristizabal@bia.app</td></tr>
+          <tr><td>Calendario destino</td><td>Alertas Operativas</td></tr>
+          <tr><td>Deduplicación</td><td>Sí — sin alertas repetidas</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="section-title"><span>📅</span> Evento Generado</div>
+        <table class="info-table">
+          <tr><td>Tipo</td><td>🔴 Todo el día (máxima visibilidad)</td></tr>
+          <tr><td>Título</td><td>🚨 Envío a Falla — HH:mm</td></tr>
+          <tr><td>Incluye</td><td>Clientes afectados</td></tr>
+          <tr><td></td><td>Detalle del correo</td></tr>
+          <tr><td></td><td>Remitente y fecha</td></tr>
+          <tr><td>Duración</td><td>Evento todo el día</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- IMPACTO EN NEGOCIO -->
+    <div class="section">
+      <div class="section-title"><span>📈</span> Impacto en el Negocio</div>
+      <div class="impacto-grid">
+        <div class="impacto-card">
+          <div class="card-icon">🎯</div>
+          <div class="card-title">Churn</div>
+          <div class="card-item">Mejora el % de cumplimiento del churn proyectado</div>
+          <div class="card-item">Activación oportuna de acciones clave</div>
+        </div>
+        <div class="impacto-card">
+          <div class="card-icon">⚙️</div>
+          <div class="card-title">Operación</div>
+          <div class="card-item">Dispara el proceso de recolección de equipos de medida</div>
+          <div class="card-item">Reduce tiempos de reacción</div>
+        </div>
+        <div class="impacto-card">
+          <div class="card-icon">👁️</div>
+          <div class="card-title">Visibilidad</div>
+          <div class="card-item">Elimina dependencia del correo manual</div>
+          <div class="card-item">Centraliza la información para todo el equipo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VALOR ESTRATÉGICO -->
+    <div class="section">
+      <div class="section-title"><span>🧠</span> Valor Estratégico</div>
+      <div class="box box-objetivo">
+        <p>Esta automatización convierte un proceso <strong>reactivo</strong> en uno <strong>proactivo y visible</strong>, permitiendo anticipación operativa, mejor coordinación del equipo y mayor control sobre eventos que impactan directamente el churn.</p>
+      </div>
+    </div>
+
+    <!-- IMPACTO EN TIEMPO -->
+    <div class="section">
+      <div class="section-title"><span>⏱️</span> Impacto en Tiempo de Respuesta</div>
+      <div class="tiempo-grid">
+        <div class="tiempo-card antes">
+          <div class="tiempo-label">Antes de la automatización</div>
+          <div class="tiempo-num">Variable e<br>impredecible</div>
+          <div class="tiempo-desc">Dependía de la revisión manual de correos. Las fallas podían perderse de vista, generando reacción tardía e impacto en el churn.</div>
+        </div>
+        <div class="tiempo-flecha">
+          <div class="flecha-icon">→</div>
+          <div class="ahorro-badge">Ahora es inmediato</div>
+        </div>
+        <div class="tiempo-card despues">
+          <div class="tiempo-label">Con la automatización</div>
+          <div class="tiempo-num">&lt; 5 min</div>
+          <div class="tiempo-desc">Detección automática cada 5 minutos. En cuanto llega el correo de falla, se genera la alerta en el calendario compartido del equipo.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ESTADO -->
+    <div class="section">
+      <div class="section-title"><span>🚀</span> Estado Actual</div>
+      <div class="estado-row">
+        <div class="estado-badge">✅ Implementado</div>
+        <div class="estado-badge">✅ Operativo</div>
+        <div class="estado-badge">✅ Escalable</div>
+      </div>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Automatización implementada · Workflow: Alertas "Envío a Falla" → Google Calendar</p>
+    <span class="confidential">CONFIDENCIAL</span>
+  </footer>
+
+</div>
+</body>
+</html>
