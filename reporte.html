@@ -13,7 +13,6 @@
 body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; min-height: 100vh; padding: 32px 24px; }
 .wrapper { max-width: 1100px; margin: 0 auto; }
 
-/* UTILS */
 .tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; }
 .tag-green { background: #DCFCE7; color: #166534; }
 .tag-blue { background: #E8E4FF; color: #5B3DF5; }
@@ -25,15 +24,12 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
 .note { padding: 10px 12px; border-radius: 0 8px 8px 0; font-size: 12px; line-height: 1.6; margin-top: 10px; }
 .note-green { border-left: 3px solid #34C759; background: #F0FDF4; color: #166534; }
 .note-blue { border-left: 3px solid #5B3DF5; background: #F5F3FF; color: #4C1D95; }
-.note-gray { border-left: 3px solid #D1D5DB; background: #F9FAFB; color: #5C5C70; }
 
-/* HEADER */
 .eyebrow { font-size: 11px; font-weight: 600; color: #5B3DF5; text-transform: uppercase; letter-spacing: 0.09em; margin-bottom: 6px; }
 .header-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
 .logo-box { width: 36px; height: 36px; background: #5B3DF5; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 17px; font-weight: 700; flex-shrink: 0; }
 .header-title { font-size: 22px; font-weight: 700; color: #1E1E1E; line-height: 1.25; }
 
-/* HERO KPIs */
 .hero-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 12px; margin-bottom: 24px; }
 .hero-main { background: #5B3DF5; border-radius: 12px; padding: 22px 20px; color: #fff; }
 .hero-main-val { font-size: 40px; font-weight: 700; line-height: 1; margin-bottom: 4px; }
@@ -43,55 +39,36 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
 .kpi-val { font-size: 22px; font-weight: 700; color: #1E1E1E; line-height: 1; }
 .kpi-lbl { font-size: 11px; color: #5C5C70; margin-top: 4px; line-height: 1.4; }
 .kpi-accent { color: #34C759; }
-.kpi-accent-purple { color: #5B3DF5; }
 
-/* BOLSA DISCLAIMER */
-.bolsa-bar { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 10px; padding: 12px 16px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.bolsa-bar-left { display: flex; align-items: center; gap: 10px; }
-.bolsa-icon { width: 28px; height: 28px; background: #FEF3C7; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
-.bolsa-title { font-size: 12px; font-weight: 600; color: #5C5C70; }
-.bolsa-sub { font-size: 11px; color: #9CA3AF; }
-.bolsa-pill { background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 8px; padding: 6px 14px; font-size: 12px; color: #92400E; font-weight: 500; }
-.bolsa-months { display: flex; gap: 8px; flex-wrap: wrap; }
-.bolsa-month-chip { font-size: 11px; padding: 4px 10px; border-radius: 6px; font-weight: 500; }
-.chip-used { background: #FEF3C7; color: #92400E; }
-.chip-free { background: #DCFCE7; color: #166534; }
+.bolsa-live-panel { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px; box-shadow: 0 1px 2px rgba(16,24,40,0.07); margin-bottom: 24px; }
+.bm-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F3F4F6; }
+.bm-row:last-child { border-bottom: none; }
+.bm-mes { width: 110px; font-size: 12px; font-weight: 600; color: #1E1E1E; flex-shrink: 0; text-transform: capitalize; }
+.bm-track { flex: 1; height: 8px; background: #F3F4F6; border-radius: 4px; overflow: hidden; }
+.bm-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.bm-amount { width: 130px; text-align: right; font-size: 12px; font-weight: 600; color: #1E1E1E; flex-shrink: 0; }
+.bm-pct { width: 52px; text-align: right; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+.bm-budget { width: 130px; text-align: right; font-size: 11px; color: #9CA3AF; flex-shrink: 0; }
 
-/* CONCIERGE SECTION */
 .section-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
 .section-title { font-size: 16px; font-weight: 700; color: #1E1E1E; }
 .section-sub { font-size: 12px; color: #5C5C70; }
 
-.concierge-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-bottom: 24px; }
-.concierge-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 16px; box-shadow: 0 1px 2px rgba(16,24,40,0.07); transition: box-shadow 0.15s; }
-.concierge-card:hover { box-shadow: 0 4px 12px rgba(91,61,245,0.1); border-color: #C4B5FD; }
-.concierge-header { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
-.avatar { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: #fff; flex-shrink: 0; }
-.av-purple { background: #5B3DF5; }
-.av-teal { background: #0D9488; }
-.av-rose { background: #E11D48; }
-.av-orange { background: #EA580C; }
-.av-blue { background: #2563EB; }
-.av-indigo { background: #4F46E5; }
-.concierge-name { font-size: 13px; font-weight: 600; color: #1E1E1E; }
-.concierge-seg { font-size: 11px; color: #5C5C70; }
+.charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
 
-.stat-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; border-bottom: 1px solid #F3F4F6; }
-.stat-row:last-child { border-bottom: none; }
-.stat-key { font-size: 11px; color: #5C5C70; }
-.stat-val { font-size: 12px; font-weight: 600; color: #1E1E1E; }
-.stat-val-green { color: #166534; }
-.stat-val-purple { color: #5B3DF5; }
+.seg-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.seg-label { width: 90px; font-size: 12px; color: #5C5C70; flex-shrink: 0; }
+.seg-bar-track { flex: 1; height: 6px; background: #F3F4F6; border-radius: 3px; overflow: hidden; }
+.seg-bar-fill { height: 100%; border-radius: 3px; }
+.seg-val { font-size: 12px; font-weight: 600; width: 55px; text-align: right; color: #1E1E1E; flex-shrink: 0; }
+.seg-count { font-size: 11px; color: #9CA3AF; flex-shrink: 0; }
 
-.method-chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
-.mchip { font-size: 10px; padding: 3px 8px; border-radius: 6px; font-weight: 500; }
-.mchip-exp { background: #E8E4FF; color: #5B3DF5; }
-.mchip-cred { background: #FEF3C7; color: #92400E; }
-.mchip-vis { background: #DCFCE7; color: #166534; }
-.mchip-sol { background: #E0F2FE; color: #0369A1; }
+.moment-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #F3F4F6; }
+.moment-row:last-child { border-bottom: none; }
+.moment-name { font-size: 12px; color: #5C5C70; }
+.moment-count { font-size: 12px; font-weight: 600; color: #1E1E1E; }
+.moment-pct { font-size: 11px; color: #9CA3AF; margin-left: 4px; }
 
-/* TIMELINE POR MES */
-.months-section { margin-bottom: 24px; }
 .month-block { margin-bottom: 12px; }
 .month-toggle { display: flex; align-items: center; gap: 10px; width: 100%; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 10px; padding: 12px 16px; cursor: pointer; transition: background 0.15s, border-color 0.15s; text-align: left; }
 .month-toggle:hover { background: #F3F0FF; border-color: #C4B5FD; }
@@ -102,10 +79,9 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
 .month-badge-free { background: #DCFCE7; color: #166534; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px; }
 .month-badge-cost { background: #FEF3C7; color: #92400E; font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 6px; }
 .month-panel { overflow: hidden; max-height: 0; opacity: 0; transition: max-height 0.35s ease, opacity 0.25s ease; }
-.month-panel.open { max-height: 2000px; opacity: 1; margin-bottom: 8px; }
+.month-panel.open { max-height: 3000px; opacity: 1; margin-bottom: 8px; }
 .month-inner { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; overflow: hidden; }
 
-/* CASES TABLE */
 .cases-table { width: 100%; border-collapse: collapse; font-size: 12px; }
 .cases-table th { padding: 10px 12px; text-align: left; background: #F9FAFB; color: #5C5C70; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #E5E7EB; }
 .cases-table td { padding: 10px 12px; border-bottom: 1px solid #F3F4F6; color: #1E1E1E; vertical-align: middle; }
@@ -119,54 +95,19 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
 .m-dev { background: #FCE7F3; color: #9D174D; }
 .m-com { background: #F0FDF4; color: #15803D; }
 .m-na { background: #F3F4F6; color: #9CA3AF; }
-.kwh-val { font-weight: 600; color: #1E1E1E; }
 .free-dot { width: 8px; height: 8px; border-radius: 50%; background: #34C759; display: inline-block; margin-right: 4px; }
 .cost-dot { width: 8px; height: 8px; border-radius: 50%; background: #FFB020; display: inline-block; margin-right: 4px; }
 
-/* CHART SECTION */
-.charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
-.chart-wrap { position: relative; height: 200px; }
-
-/* SEGMENT BREAKDOWN */
-.seg-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.seg-label { width: 70px; font-size: 12px; color: #5C5C70; flex-shrink: 0; }
-.seg-bar-track { flex: 1; height: 6px; background: #F3F4F6; border-radius: 3px; overflow: hidden; }
-.seg-bar-fill { height: 100%; border-radius: 3px; }
-.seg-val { font-size: 12px; font-weight: 600; width: 55px; text-align: right; color: #1E1E1E; flex-shrink: 0; }
-.seg-count { font-size: 11px; color: #9CA3AF; flex-shrink: 0; }
-
-/* MOMENT BREAKDOWN */
-.moment-row { display: flex; align-items: center; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid #F3F4F6; }
-.moment-row:last-child { border-bottom: none; }
-.moment-name { font-size: 12px; color: #5C5C70; }
-.moment-count { font-size: 12px; font-weight: 600; color: #1E1E1E; }
-.moment-pct { font-size: 11px; color: #9CA3AF; margin-left: 4px; }
-
-/* BOLSA USAGE */
-.bolsa-progress-wrap { margin-top: 8px; }
-.bolsa-progress-bar { height: 8px; background: #F3F4F6; border-radius: 4px; overflow: hidden; margin-bottom: 6px; }
-.bolsa-progress-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #34C759, #FFB020); }
-.bolsa-progress-labels { display: flex; justify-content: space-between; font-size: 11px; color: #9CA3AF; }
-
-/* BOLSA MES A MES LIVE */
-.bolsa-live-panel { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 20px; box-shadow: 0 1px 2px rgba(16,24,40,0.07); margin-bottom: 24px; }
-.bm-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F3F4F6; }
-.bm-row:last-child { border-bottom: none; }
-.bm-mes { width: 110px; font-size: 12px; font-weight: 600; color: #1E1E1E; flex-shrink: 0; text-transform: capitalize; }
-.bm-track { flex: 1; height: 8px; background: #F3F4F6; border-radius: 4px; overflow: hidden; }
-.bm-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
-.bm-amount { width: 130px; text-align: right; font-size: 12px; font-weight: 600; color: #1E1E1E; flex-shrink: 0; }
-.bm-pct { width: 52px; text-align: right; font-size: 13px; font-weight: 700; flex-shrink: 0; }
-.bm-budget { width: 130px; text-align: right; font-size: 11px; color: #9CA3AF; flex-shrink: 0; }
+.loading { text-align: center; padding: 48px; color: #9CA3AF; font-size: 13px; }
+.spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid #E5E7EB; border-top-color: #5B3DF5; border-radius: 50%; animation: spin 0.7s linear infinite; margin-bottom: 8px; }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 @media (max-width: 768px) {
   .hero-grid { grid-template-columns: 1fr 1fr; }
-  .concierge-grid { grid-template-columns: 1fr 1fr; }
   .charts-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .concierge-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -180,33 +121,38 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
       <div class="logo-box">B</div>
       <div class="header-title">Gestión De Retención Y Fidelización</div>
     </div>
-    <div style="font-size:13px;color:#5C5C70;margin-top:4px;">Ene 2026 – May 2026 · Lo que se logra desde la experiencia · Corte 4 mayo 2026</div>
+    <div id="headerSub" style="font-size:13px;color:#5C5C70;margin-top:4px;">Cargando datos...</div>
   </div>
 
   <!-- HERO KPIs -->
   <div class="hero-grid" style="margin-bottom:24px;">
     <div class="hero-main">
       <div style="font-size:11px;font-weight:600;opacity:0.7;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Energía retenida total</div>
-      <div class="hero-main-val">4.32 GWh</div>
-      <div class="hero-main-lbl">protegidos del churn · 29 casos gestionados</div>
-      <div class="hero-main-sub">Ene 2026 → May 2026 · Mercado regulado + no regulado</div>
+      <div class="hero-main-val" id="kpiKwh">—</div>
+      <div class="hero-main-lbl" id="kpiKwhSub">cargando...</div>
+      <div class="hero-main-sub" id="kpiRango">—</div>
     </div>
     <div class="kpi-box">
       <div class="sec-lbl">Sin costo</div>
-      <div class="kpi-val kpi-accent">13</div>
+      <div class="kpi-val kpi-accent" id="kpiSinCosto">—</div>
       <div class="kpi-lbl">casos resueltos<br>sin usar la bolsa</div>
-      <div style="margin-top:8px;font-size:11px;color:#166534;font-weight:600;">43% del total</div>
+      <div style="margin-top:8px;font-size:11px;color:#166534;font-weight:600;" id="kpiSinCostoPct">—</div>
     </div>
     <div class="kpi-box">
       <div class="sec-lbl">Con bolsa</div>
-      <div class="kpi-val" style="color:#FFB020;">17</div>
+      <div class="kpi-val" style="color:#FFB020;" id="kpiConBolsa">—</div>
       <div class="kpi-lbl">casos con apoyo<br>de Biacréditos u otro</div>
-      <div style="margin-top:8px;font-size:11px;color:#92400E;font-weight:600;">57% del total</div>
+      <div style="margin-top:8px;font-size:11px;color:#92400E;font-weight:600;" id="kpiConBolsaPct">—</div>
     </div>
-
+    <div class="kpi-box">
+      <div class="sec-lbl">Total casos</div>
+      <div class="kpi-val" style="color:#5B3DF5;" id="kpiTotal">—</div>
+      <div class="kpi-lbl">casos gestionados<br>y aprobados</div>
+      <div style="margin-top:8px;font-size:11px;color:#5B3DF5;font-weight:600;" id="kpiMeses">—</div>
+    </div>
   </div>
 
-  <!-- BOLSA MES A MES LIVE -->
+  <!-- BOLSA MES A MES -->
   <div class="bolsa-live-panel">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
       <div class="sec-lbl" style="margin-bottom:0;">💰 Bolsa utilizada mes a mes · datos en tiempo real</div>
@@ -219,115 +165,35 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
       <span style="width:130px;text-align:right;flex-shrink:0;">Presupuesto</span>
       <span style="width:52px;text-align:right;flex-shrink:0;">%</span>
     </div>
-    <div id="bolsaMesRows">
-      <div style="text-align:center;padding:24px;color:#9CA3AF;font-size:13px;">Cargando datos de Supabase...</div>
-    </div>
-    <div id="bolsaMesTotales" style="margin-top:12px;padding-top:12px;border-top:1px solid #E5E7EB;display:none;">
-    </div>
+    <div id="bolsaMesRows"><div class="loading"><div class="spinner"></div><br>Cargando bolsa...</div></div>
+    <div id="bolsaMesTotales" style="margin-top:12px;padding-top:12px;border-top:1px solid #E5E7EB;display:none;"></div>
   </div>
 
-
-  <!-- CHARTS ROW -->
-  <div class="charts-grid" style="margin-bottom:24px;">
-
-    <!-- Métodos de gestión -->
+  <!-- CHARTS -->
+  <div class="charts-grid">
     <div class="card">
       <div class="sec-lbl" style="margin-bottom:14px;">Cómo se resolvió · métodos de gestión</div>
-      <div class="seg-row">
-        <div class="seg-label">Biacréditos</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:100%;background:#FFB020;"></div></div>
-        <div class="seg-val">12 casos</div>
-        <div class="seg-count">40%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Gestión exp.</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:50%;background:#5B3DF5;"></div></div>
-        <div class="seg-val">6 casos</div>
-        <div class="seg-count">20%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Visita emerg.</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:50%;background:#34C759;"></div></div>
-        <div class="seg-val">6 casos</div>
-        <div class="seg-count">20%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Soluciones</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:42%;background:#2563EB;"></div></div>
-        <div class="seg-val">5 casos</div>
-        <div class="seg-count">17%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Otros</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:8%;background:#9CA3AF;"></div></div>
-        <div class="seg-val">1 caso</div>
-        <div class="seg-count">3%</div>
-      </div>
+      <div id="metodosBars"><div class="loading"><div class="spinner"></div></div></div>
       <div class="divider" style="margin:14px 0 10px;"></div>
-      <div class="note note-green" style="margin-top:0;">
-        <strong>43% de los casos</strong> se resolvió desde la experiencia, sin necesidad de invertir de la bolsa.
-      </div>
+      <div class="note note-green" id="notaMetodos" style="margin-top:0;"></div>
     </div>
-
-  </div>
-
-  <!-- MOMENTOS DE RETENCIÓN -->
-  <div class="charts-grid" style="margin-bottom:24px;">
     <div class="card">
       <div class="sec-lbl" style="margin-bottom:14px;">Momento de retención</div>
-      <div class="moment-row">
-        <span class="moment-name">Fricción relación · &lt; 1 año</span>
-        <span><span class="moment-count">13</span><span class="moment-pct"> 43%</span></span>
-      </div>
-      <div class="moment-row">
-        <span class="moment-name">Fricción relación · ≥ 1 año</span>
-        <span><span class="moment-count">8</span><span class="moment-pct"> 27%</span></span>
-      </div>
-      <div class="moment-row">
-        <span class="moment-name">Intención de retiro</span>
-        <span><span class="moment-count">9</span><span class="moment-pct"> 30%</span></span>
-      </div>
+      <div id="momentoRows"><div class="loading"><div class="spinner"></div></div></div>
       <div class="divider" style="margin:14px 0 10px;"></div>
-      <div style="font-size:12px;color:#5C5C70;line-height:1.6;">La mayoría de casos son fricciones tempranas — clientes con menos de un año. La gestión proactiva evita que escalen a intención de retiro.</div>
+      <div style="font-size:12px;color:#5C5C70;line-height:1.6;" id="notaMomentos"></div>
     </div>
+  </div>
 
+  <div class="charts-grid">
     <div class="card">
       <div class="sec-lbl" style="margin-bottom:14px;">Motivos de fricción más frecuentes</div>
-      <div class="seg-row">
-        <div class="seg-label">Emergencias</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:100%;background:#2563EB;"></div></div>
-        <div class="seg-val">10 casos</div>
-        <div class="seg-count">33%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Tarifas</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:80%;background:#5B3DF5;"></div></div>
-        <div class="seg-val">8 casos</div>
-        <div class="seg-count">27%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Pagos / AGPE</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:50%;background:#E11D48;"></div></div>
-        <div class="seg-val">5 casos</div>
-        <div class="seg-count">17%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Calidad energ.</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:30%;background:#0D9488;"></div></div>
-        <div class="seg-val">3 casos</div>
-        <div class="seg-count">10%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Facturación</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:30%;background:#EA580C;"></div></div>
-        <div class="seg-val">3 casos</div>
-        <div class="seg-count">10%</div>
-      </div>
-      <div class="seg-row">
-        <div class="seg-label">Impuestos</div>
-        <div class="seg-bar-track"><div class="seg-bar-fill" style="width:10%;background:#9CA3AF;"></div></div>
-        <div class="seg-val">1 caso</div>
-        <div class="seg-count">3%</div>
+      <div id="motivosBars"><div class="loading"><div class="spinner"></div></div></div>
+    </div>
+    <div class="card">
+      <div class="sec-lbl" style="margin-bottom:14px;">Revenue protegido por mes · COP</div>
+      <div style="position:relative;height:200px;">
+        <canvas id="chartRevenue"></canvas>
       </div>
     </div>
   </div>
@@ -339,366 +205,10 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
       <div class="section-sub">Cada caso · cliente · concierge · método · kWh</div>
     </div>
   </div>
-
-  <!-- ENERO -->
-  <div class="month-block">
-    <button class="month-toggle" onclick="toggleMonth(this)">
-      <span class="month-toggle-icon">▶</span>
-      <span class="month-toggle-label">Enero 2026</span>
-      <span class="month-toggle-meta">10 casos · 2,127,980 kWh</span>
-      <span class="month-badge-cost">$14.990.109 bolsa</span>
-    </button>
-    <div class="month-panel">
-      <div class="month-inner">
-        <table class="cases-table">
-          <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
-          <tbody>
-            <!-- SIN COSTO: desc por kWh → IKEA 663900, KFC 445254, Lean Solution 213553, Cucinare 69402, Inveral 13026, Consuelo Fierro 377 -->
-            <tr>
-              <td><strong>IKEA</strong></td><td>Susan</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Pagos / Plazos</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">663,900</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>KFC</strong></td><td>Susan</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Emergencias</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">445,254</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Lean Solution</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Tarifas / Competitividad</td><td>Intención retiro</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">213,553</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Cucinare</strong></td><td>Cristian</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Renting / AGPE</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">69,402</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Inveral</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Ingreso EMS</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">13,026</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Consuelo Fierro</strong></td><td>Estefany</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Pagos / Plazos</td><td>Intención retiro</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">377</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <!-- DIVISOR -->
-            <tr><td colspan="8" style="padding:0;"><div style="height:1px;background:linear-gradient(90deg,transparent,#E5E7EB 20%,#E5E7EB 80%,transparent);margin:2px 0;"></div></td></tr>
-            <!-- CON BOLSA -->
-            <tr>
-              <td><strong>BODYTECH</strong></td><td>Susan</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Tarifas / Competitividad</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">461,448</td>
-              <td style="color:#92400E;font-size:11px;">$3.958.632</td>
-            </tr>
-            <tr>
-              <td><strong>TERPEL</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Tarifas / Competitividad</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">204,921</td>
-              <td style="color:#92400E;font-size:11px;">$6.663.917</td>
-            </tr>
-            <tr>
-              <td><strong>DEL SOL S.A.S.</strong></td><td>Andrés</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Emergencias</td><td>Intención retiro</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">49,954</td>
-              <td style="color:#92400E;font-size:11px;">$2.522.492</td>
-            </tr>
-            <tr>
-              <td><strong>Un Dos Tres Por Mí</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Tarifas / AGPE</td><td>Intención retiro</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">6,145</td>
-              <td style="color:#92400E;font-size:11px;">$1.845.068</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- FEBRERO -->
-  <div class="month-block">
-    <button class="month-toggle" onclick="toggleMonth(this)">
-      <span class="month-toggle-icon">▶</span>
-      <span class="month-toggle-label">Febrero 2026</span>
-      <span class="month-toggle-meta">6 casos · 617,071 kWh</span>
-      <span class="month-badge-cost">$8.432.209 bolsa</span>
-    </button>
-    <div class="month-panel">
-      <div class="month-inner">
-        <table class="cases-table">
-          <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
-          <tbody>
-            <!-- SIN COSTO: desc → Plásticos y Resinas 124688, Home Burger 61929, Grupo Forros 38007 -->
-            <tr>
-              <td><strong>Plásticos y Resinas</strong></td><td>Cristian</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Emergencias</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">124,688</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Home Burger</strong></td><td>Cristian</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Reactivas</td><td>Intención retiro</td>
-              <td><span class="method-pill m-sol">Banco condensadores</span></td>
-              <td class="kwh-val">61,929</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Grupo Forros Estadio</strong></td><td>Estefany</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Impuestos</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-dev">Dev. Alumbrado</span></td>
-              <td class="kwh-val">38,007</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <!-- DIVISOR -->
-            <tr><td colspan="8" style="padding:0;"><div style="height:1px;background:linear-gradient(90deg,transparent,#E5E7EB 20%,#E5E7EB 80%,transparent);margin:2px 0;"></div></td></tr>
-            <!-- CON BOLSA: desc → BYCSA 185097, DISTRAVES 193003, Nutrix 11347 -->
-            <tr>
-              <td><strong>BYCSA</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Calidad de la energía</td><td>Intención retiro</td>
-              <td><span class="method-pill m-sol">Analizador redes</span></td>
-              <td class="kwh-val">185,097</td>
-              <td style="color:#92400E;font-size:11px;">$4.879.000</td>
-            </tr>
-            <tr>
-              <td><strong>DISTRAVES</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Emergencias</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">193,003</td>
-              <td style="color:#92400E;font-size:11px;">$332.000</td>
-            </tr>
-            <tr>
-              <td><strong>Alimentos Nutrix</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Tarifas / Competitividad</td><td>Intención retiro</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">11,347</td>
-              <td style="color:#92400E;font-size:11px;">$3.221.209</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- MARZO -->
-  <div class="month-block">
-    <button class="month-toggle" onclick="toggleMonth(this)">
-      <span class="month-toggle-icon">▶</span>
-      <span class="month-toggle-label">Marzo 2026</span>
-      <span class="month-toggle-meta">6 casos · 153,305 kWh</span>
-      <span class="month-badge-cost">$1.074.915 bolsa</span>
-    </button>
-    <div class="month-panel">
-      <div class="month-inner">
-        <table class="cases-table">
-          <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
-          <tbody>
-            <!-- SIN COSTO: desc → C.R. & Compañía 23200, El Diamante 12529, Camino Palmero 6426 -->
-            <tr>
-              <td><strong>C.R. & Compañía (La Chispa)</strong></td><td>Andrés</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">23,200</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>El Diamante</strong></td><td>Lina</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Tarifas / Competitividad</td><td>Intención retiro</td>
-              <td><span class="method-pill m-com">Comunidades Energ.</span></td>
-              <td class="kwh-val">12,529</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <tr>
-              <td><strong>Camino Palmero</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Financiación</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-exp">Gestión exp.</span></td>
-              <td class="kwh-val">6,426</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <!-- DIVISOR -->
-            <tr><td colspan="8" style="padding:0;"><div style="height:1px;background:linear-gradient(90deg,transparent,#E5E7EB 20%,#E5E7EB 80%,transparent);margin:2px 0;"></div></td></tr>
-            <!-- CON BOLSA -->
-            <tr>
-              <td><strong>Col. Envases Industriales</strong></td><td>Lina</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">25,000</td>
-              <td style="color:#92400E;font-size:11px;">$600.000</td>
-            </tr>
-            <tr>
-              <td><strong>HIDROMAC</strong></td><td>Cristina</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Tarifas</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">67,610</td>
-              <td style="color:#92400E;font-size:11px;">$174.915</td>
-            </tr>
-            <tr>
-              <td><strong>Ladrillera La Toscana</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Consumos / Pago</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">14,540</td>
-              <td style="color:#92400E;font-size:11px;">$300.000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABRIL -->
-  <div class="month-block">
-    <button class="month-toggle" onclick="toggleMonth(this)">
-      <span class="month-toggle-icon">▶</span>
-      <span class="month-toggle-label">Abril 2026 · Cerrado</span>
-      <span class="month-toggle-meta">7 casos · 1,315,486 kWh</span>
-      <span class="month-badge-cost">$10.453.691 bolsa</span>
-    </button>
-    <div class="month-panel">
-      <div class="month-inner">
-        <table class="cases-table">
-          <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
-          <tbody>
-            <!-- SIN COSTO -->
-            <tr>
-              <td><strong>Hotel Zuana (2)</strong></td><td>Susan</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-sol">Solución Energética</span></td>
-              <td class="kwh-val">666,244</td>
-              <td><span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span></td>
-            </tr>
-            <!-- DIVISOR -->
-            <tr><td colspan="8" style="padding:0;"><div style="height:1px;background:linear-gradient(90deg,transparent,#E5E7EB 20%,#E5E7EB 80%,transparent);margin:2px 0;"></div></td></tr>
-            <!-- CON BOLSA -->
-            <tr>
-              <td><strong>Hotel Zuana (1)</strong></td><td>Susan</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">634,014</td>
-              <td style="color:#92400E;font-size:11px;">$314.995</td>
-            </tr>
-            <tr>
-              <td><strong>HOLCIM</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Calidad / Reactivas</td><td>Intención retiro</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">56,000</td>
-              <td style="color:#92400E;font-size:11px;">$6.596.517</td>
-            </tr>
-            <tr>
-              <td><strong>Inveral (seguimiento)</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Facturación / SAP</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">13,026</td>
-              <td style="color:#92400E;font-size:11px;">$2.057.103</td>
-            </tr>
-            <tr>
-              <td><strong>Masterbox Internacional</strong></td><td>Vanessa</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción ≥ 1 año</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">4,000</td>
-              <td style="color:#92400E;font-size:11px;">$267.076</td>
-            </tr>
-            <tr>
-              <td><strong>El Diamante (seguimiento)</strong></td><td>Lina</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Zafiro</span></td>
-              <td>Tarifas / Reactivas</td><td>Intención retiro</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">13,297</td>
-              <td style="color:#92400E;font-size:11px;">$870.000</td>
-            </tr>
-            <tr>
-              <td><strong>Banco Davivienda</strong></td><td>Jerenny</td>
-              <td><span class="tag tag-gray" style="font-size:10px;">Diamante</span></td>
-              <td>Emergencias</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-vis">Visita Emergencias</span></td>
-              <td class="kwh-val">3,905</td>
-              <td style="color:#92400E;font-size:11px;">$348.000</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <!-- MAYO -->
-  <div class="month-block">
-    <button class="month-toggle" onclick="toggleMonth(this)">
-      <span class="month-toggle-icon">▶</span>
-      <span class="month-toggle-label">Mayo 2026 · En curso</span>
-      <span class="month-toggle-meta">1 caso en revisión · mes activo</span>
-      <span class="month-badge-free">▶ En curso</span>
-    </button>
-    <div class="month-panel">
-      <div class="month-inner">
-        <div style="background:#FEF3C7;border:1px solid #FDE68A;border-radius:8px;padding:10px 14px;margin-bottom:14px;">
-          <div style="font-size:10px;font-weight:700;color:#92400E;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;">◆ En revisión — bolsa pendiente de confirmación</div>
-          <div style="font-size:12px;color:#92400E;">Estos casos de Abril están siendo validados. Una vez confirmados se actualizarán los totales.</div>
-        </div>
-        <table class="cases-table">
-          <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
-          <tbody>
-            <tr style="opacity:0.75;">
-              <td><strong>Avicampo</strong></td><td>Andrés</td>
-              <td><span class="tag tag-blue" style="font-size:10px;">Esmeralda</span></td>
-              <td>Emergencias / Calidad</td><td>Fricción &lt; 1 año</td>
-              <td><span class="method-pill m-cred">Biacréditos</span></td>
-              <td class="kwh-val">7,800</td>
-              <td style="color:#92400E;font-size:11px;">$1.000.000 <span style="background:#FEF3C7;color:#92400E;padding:1px 6px;border-radius:4px;font-weight:600;">· En revisión</span></td>
-            </tr>
-          </tbody>
-        </table>
-        <div style="padding-top:14px;text-align:center;font-size:12px;color:#5C5C70;">Los casos cerrados de mayo se registrarán aquí a medida que se confirmen.</div>
-      </div>
-    </div>
-  </div>
+  <div id="mesesContainer"><div class="loading"><div class="spinner"></div><br>Cargando casos...</div></div>
 
   <div style="height:32px;"></div>
 
-  <!-- DIVIDER -->
   <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
     <div style="flex:1;height:1px;background:#E5E7EB;"></div>
     <div style="font-size:10px;font-weight:600;color:#5B3DF5;text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;">Visión ejecutiva · Para comité</div>
@@ -706,93 +216,25 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
   </div>
 
   <!-- REVENUE HERO -->
-  <div style="background:#1E1E1E;border-radius:14px;padding:28px 24px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
-    <div>
-      <div style="font-size:10px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.09em;margin-bottom:8px;">Revenue protegido · Ene 2026 – Abr 2026</div>
-      <div style="font-size:48px;font-weight:700;color:#fff;line-height:1;margin-bottom:6px;">$3.688M</div>
-      <div style="font-size:13px;color:#9CA3AF;">en facturación anual protegida del churn · 29 casos gestionados</div>
-    </div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;">
-      <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
-        <div style="font-size:22px;font-weight:700;color:#34C759;">$132.1M</div>
-        <div style="font-size:11px;color:#6B7280;margin-top:3px;">C+B total protegido</div>
-      </div>
-      <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
-        <div style="font-size:22px;font-weight:700;color:#5B3DF5;">6.1%</div>
-        <div style="font-size:11px;color:#6B7280;margin-top:3px;">Take rate promedio</div>
-      </div>
-      <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
-        <div style="font-size:22px;font-weight:700;color:#FFB020;">4.32 GWh</div>
-        <div style="font-size:11px;color:#6B7280;margin-top:3px;">energía total retenida</div>
-      </div>
-    </div>
+  <div id="revenueHero" style="background:#1E1E1E;border-radius:14px;padding:28px 24px;margin-bottom:16px;">
+    <div class="loading" style="color:#9CA3AF;"><div class="spinner" style="border-top-color:#fff;"></div><br>Cargando revenue...</div>
   </div>
 
   <!-- REVENUE CHART -->
-  <div style="margin-bottom:16px;">
-
-    <!-- Revenue por mes -->
-    <div class="card">
-      <div class="sec-lbl" style="margin-bottom:14px;">Revenue protegido por mes · COP</div>
-      <div style="position:relative;height:200px;">
-        <canvas id="chartRevenue"></canvas>
-      </div>
+  <div class="card" style="margin-bottom:16px;">
+    <div class="sec-lbl" style="margin-bottom:14px;">Revenue protegido por mes · COP</div>
+    <div style="position:relative;height:200px;">
+      <canvas id="chartRevenue2"></canvas>
     </div>
-
   </div>
 
-  <!-- TAKE RATE TABLE -->
+  <!-- TAKE RATE -->
   <div class="card" style="margin-bottom:16px;">
     <div class="sec-lbl" style="margin-bottom:16px;">Take rate de clientes retenidos · los que más aportan al margen</div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
-
-      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">Inveral</div>
-        <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">Diamante · Ene + Abr</div>
-        <div style="font-size:20px;font-weight:700;color:#5B3DF5;">23.9%</div>
-        <div style="font-size:10px;color:#9CA3AF;">take rate</div>
-      </div>
-
-      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">Col. Envases Industriales</div>
-        <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">Zafiro · Mar</div>
-        <div style="font-size:20px;font-weight:700;color:#5B3DF5;">11.6%</div>
-        <div style="font-size:10px;color:#9CA3AF;">take rate</div>
-      </div>
-
-      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">Masterbox</div>
-        <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">Zafiro · Abr</div>
-        <div style="font-size:20px;font-weight:700;color:#5B3DF5;">8.3%</div>
-        <div style="font-size:10px;color:#9CA3AF;">take rate</div>
-      </div>
-
-      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">Hotel Zuana</div>
-        <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">Diamante · Abr</div>
-        <div style="font-size:20px;font-weight:700;color:#5B3DF5;">7.6%</div>
-        <div style="font-size:10px;color:#9CA3AF;">take rate</div>
-      </div>
-
-      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">Grupo Forros Estadio</div>
-        <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">Zafiro · Feb</div>
-        <div style="font-size:20px;font-weight:700;color:#5B3DF5;">7.2%</div>
-        <div style="font-size:10px;color:#9CA3AF;">take rate</div>
-      </div>
-
-      <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:12px;">
-        <div style="font-size:12px;font-weight:600;color:#166534;margin-bottom:2px;">Promedio portafolio retenido</div>
-        <div style="font-size:10px;color:#4ADE80;margin-bottom:6px;">todos los casos</div>
-        <div style="font-size:20px;font-weight:700;color:#166534;">6.1%</div>
-        <div style="font-size:10px;color:#4ADE80;">vs mercado regulado típico ~4–5%</div>
-      </div>
-
+    <div id="takeRateGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;">
+      <div class="loading"><div class="spinner"></div></div>
     </div>
-
-    <div class="note note-blue" style="margin-top:14px;">
-      El equipo no solo retuvo clientes — retuvo los de <strong>mayor margen</strong>. Inveral con 23.9% de take rate representa el doble del promedio del mercado regulado.
-    </div>
+    <div class="note note-blue" style="margin-top:14px;" id="notaTakeRate"></div>
   </div>
 
   <div style="height:24px;"></div>
@@ -800,67 +242,167 @@ body { font-family: 'Inter', sans-serif; background: #F4F5F7; color: #1E1E1E; mi
 </div>
 
 <script>
-// CHART: Revenue por mes
-new Chart(document.getElementById('chartRevenue'), {
-  type: 'bar',
-  data: {
-    labels: ['Ene', 'Feb', 'Mar', 'Abr'],
-    datasets: [{
-      data: [2092001270, 633858320, 104830371, 857545710],
-      backgroundColor: ['#5B3DF5','#7C6BF7','#9D8FF9','#5B3DF5'],
-      borderRadius: 6,
-    }]
-  },
-  options: {
-    responsive: true, maintainAspectRatio: false,
-    plugins: {
-      legend: { display: false },
-      tooltip: { callbacks: { label: ctx => '$' + (ctx.parsed.y / 1000000).toFixed(1) + 'M' }},
-      datalabels: {
-        anchor: 'end', align: 'end',
-        formatter: v => '$' + (v / 1000000).toFixed(1) + 'M',
-        font: { size: 10, family: 'Inter', weight: '600' },
-        color: '#5C5C70'
+const SUPABASE_URL = 'https://pkttictgnmouxglohroi.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_S1oYLKpK1x4MksBNuKd59A_lkq0EiKQ';
+const { createClient } = supabase;
+const db = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const MES_ORDER = ['enero/2026','febrero/2026','marzo/2026','abril/2026','mayo/2026','junio/2026','julio/2026','agosto/2026','septiembre/2026','octubre/2026','noviembre/2026','diciembre/2026'];
+const COLORS = ['#5B3DF5','#FFB020','#34C759','#2563EB','#E11D48','#0D9488','#EA580C','#9CA3AF'];
+
+const fmt = n => '$' + Math.round(n).toLocaleString('es-CO');
+const fmtM = n => '$' + (n / 1000000).toFixed(1) + 'M';
+const pct = (used, total) => total > 0 ? Math.min(100, (used / total) * 100) : 0;
+
+// Campo helpers — maneja distintos nombres posibles
+const getField = (obj, ...keys) => { for (const k of keys) if (obj[k] !== undefined && obj[k] !== null) return obj[k]; return null; };
+const getStr = (obj, ...keys) => getField(obj, ...keys) || '—';
+const getNum = (obj, ...keys) => Number(getField(obj, ...keys) || 0);
+
+function methodClass(m) {
+  if (!m) return 'm-na';
+  const l = m.toLowerCase();
+  if (l.includes('biacr') || l.includes('crédito') || l.includes('credito')) return 'm-cred';
+  if (l.includes('visita') || l.includes('emergencia')) return 'm-vis';
+  if (l.includes('gestión') || l.includes('gestion') || l.includes('exp')) return 'm-exp';
+  if (l.includes('solución') || l.includes('solucion') || l.includes('analizador') || l.includes('condensador') || l.includes('banco')) return 'm-sol';
+  if (l.includes('devolución') || l.includes('devolucion') || l.includes('alumbrado')) return 'm-dev';
+  if (l.includes('comunidad')) return 'm-com';
+  return 'm-na';
+}
+
+function segTag(seg) {
+  if (!seg) return '<span class="tag tag-gray" style="font-size:10px;">—</span>';
+  const l = seg.toLowerCase();
+  if (l.includes('diamante')) return '<span class="tag tag-gray" style="font-size:10px;">Diamante</span>';
+  if (l.includes('esmeralda')) return '<span class="tag tag-blue" style="font-size:10px;">Esmeralda</span>';
+  if (l.includes('zafiro')) return '<span class="tag tag-amber" style="font-size:10px;">Zafiro</span>';
+  return `<span class="tag tag-gray" style="font-size:10px;">${seg}</span>`;
+}
+
+function renderBars(container, data, colors) {
+  const max = Math.max(...data.map(d => d.count), 1);
+  container.innerHTML = data.map((d, i) => `
+    <div class="seg-row">
+      <div class="seg-label" style="width:110px;">${d.label}</div>
+      <div class="seg-bar-track"><div class="seg-bar-fill" style="width:${(d.count/max*100).toFixed(1)}%;background:${colors[i % colors.length]};"></div></div>
+      <div class="seg-val">${d.count} caso${d.count !== 1 ? 's' : ''}</div>
+      <div class="seg-count">${d.pct}%</div>
+    </div>`).join('');
+}
+
+let revenueChart1, revenueChart2;
+
+function renderRevenueChart(canvasId, labels, values) {
+  const ctx = document.getElementById(canvasId);
+  if (!ctx) return;
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{ data: values, backgroundColor: COLORS, borderRadius: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => fmtM(ctx.parsed.y) } },
+        datalabels: {
+          anchor: 'end', align: 'end',
+          formatter: v => v > 0 ? fmtM(v) : '',
+          font: { size: 10, family: 'Inter', weight: '600' },
+          color: '#5C5C70'
+        }
+      },
+      scales: {
+        x: { ticks: { font: { size: 11 } }, grid: { display: false } },
+        y: {
+          ticks: { callback: v => fmtM(v), font: { size: 10 } },
+          grid: { color: 'rgba(120,120,120,0.08)' },
+          grace: '15%'
+        }
       }
     },
-    scales: {
-      x: { ticks: { font:{size:11} }, grid: { display: false } },
-      y: {
-        ticks: { callback: v => '$' + (v/1000000).toFixed(0) + 'M', font:{size:10} },
-        grid: { color:'rgba(120,120,120,0.08)' },
-        grace: '15%'
-      }
-    }
-  },
-  plugins: [ChartDataLabels]
-});
+    plugins: [ChartDataLabels]
+  });
+}
 
-// SUPABASE BOLSA MES A MES
+function toggleMonth(btn) {
+  const panel = btn.nextElementSibling;
+  const icon = btn.querySelector('.month-toggle-icon');
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  icon.classList.toggle('open', !isOpen);
+}
+
 (async () => {
-  const SUPABASE_URL = 'https://pkttictgnmouxglohroi.supabase.co';
-  const SUPABASE_KEY = 'sb_publishable_S1oYLKpK1x4MksBNuKd59A_lkq0EiKQ';
-  const { createClient } = supabase;
-  const db = createClient(SUPABASE_URL, SUPABASE_KEY);
-
-  const fmt = n => '$' + Math.round(n).toLocaleString('es-CO');
-  const pct = (used, total) => total > 0 ? Math.min(100, (used / total) * 100) : 0;
-
   try {
-    const MES_ORDER = ['enero/2026','febrero/2026','marzo/2026','abril/2026','mayo/2026','junio/2026','julio/2026','agosto/2026','septiembre/2026','octubre/2026','noviembre/2026','diciembre/2026'];
-    const [{ data: config }, { data: casos }] = await Promise.all([
-      db.from('bolsa_config').select('mes, monto_bolsa'),
-      db.from('casos').select('mes_entrega, valor_entregado').eq('estado', 'aprobado')
+    // 1. Fetch all data in parallel
+    const [
+      { data: casosRaw },
+      { data: clientesRaw },
+      { data: configRaw }
+    ] = await Promise.all([
+      db.from('casos').select('*').eq('estado', 'aprobado'),
+      db.from('clientes').select('company_id, kwh_promedio, revenue, c_b'),
+      db.from('bolsa_config').select('mes, monto_bolsa')
     ]);
 
-    // Agrupar casos por mes
-    const gastoMes = {};
-    (casos || []).forEach(c => {
-      gastoMes[c.mes_entrega] = (gastoMes[c.mes_entrega] || 0) + (c.valor_entregado || 0);
+    const casos = casosRaw || [];
+    const config = configRaw || [];
+
+    // 2. Aggregate clientes by company_id
+    const clienteMap = {};
+    (clientesRaw || []).forEach(c => {
+      if (!clienteMap[c.company_id]) clienteMap[c.company_id] = { kwh: 0, revenue: 0, cb: 0 };
+      clienteMap[c.company_id].kwh += Number(c.kwh_promedio || 0);
+      clienteMap[c.company_id].revenue += Number(c.revenue || 0);
+      clienteMap[c.company_id].cb += Number(c.c_b || 0);
     });
 
-    let totalPresupuesto = 0, totalGastado = 0;
+    // 3. Compute KPIs
+    const totalKwh = casos.reduce((s, c) => {
+      const kwh = getNum(c, 'kwh_promedio', 'kwh') || (clienteMap[c.company_id]?.kwh || 0);
+      return s + kwh;
+    }, 0);
+
+    const sinCosto = casos.filter(c => !getNum(c, 'valor_entregado', 'valor') || getNum(c, 'valor_entregado', 'valor') === 0);
+    const conBolsa = casos.filter(c => getNum(c, 'valor_entregado', 'valor') > 0);
+    const totalCasos = casos.length;
+
+    const mesesUsados = [...new Set(casos.map(c => getStr(c, 'mes_entrega', 'mes')).filter(m => m !== '—'))];
+    mesesUsados.sort((a, b) => MES_ORDER.indexOf(a) - MES_ORDER.indexOf(b));
+
+    const primerMes = mesesUsados[0] || '';
+    const ultimoMes = mesesUsados[mesesUsados.length - 1] || '';
+    const labelRango = primerMes && ultimoMes
+      ? `${primerMes.charAt(0).toUpperCase() + primerMes.slice(1).replace('/', ' ')} → ${ultimoMes.charAt(0).toUpperCase() + ultimoMes.slice(1).replace('/', ' ')}`
+      : 'Todos los periodos';
+
+    // 4. Render Header & KPIs
+    document.getElementById('headerSub').textContent = `${labelRango} · Lo que se logra desde la experiencia · Actualizado: ${new Date().toLocaleString('es-CO')}`;
+
+    const kwhLabel = totalKwh >= 1000000 ? (totalKwh / 1000000).toFixed(2) + ' GWh' : Math.round(totalKwh).toLocaleString('es-CO') + ' kWh';
+    document.getElementById('kpiKwh').textContent = kwhLabel;
+    document.getElementById('kpiKwhSub').textContent = `protegidos del churn · ${totalCasos} caso${totalCasos !== 1 ? 's' : ''} gestionados`;
+    document.getElementById('kpiRango').textContent = labelRango + ' · Mercado regulado + no regulado';
+    document.getElementById('kpiSinCosto').textContent = sinCosto.length;
+    document.getElementById('kpiSinCostoPct').textContent = totalCasos ? Math.round(sinCosto.length / totalCasos * 100) + '% del total' : '—';
+    document.getElementById('kpiConBolsa').textContent = conBolsa.length;
+    document.getElementById('kpiConBolsaPct').textContent = totalCasos ? Math.round(conBolsa.length / totalCasos * 100) + '% del total' : '—';
+    document.getElementById('kpiTotal').textContent = totalCasos;
+    document.getElementById('kpiMeses').textContent = mesesUsados.length + ' mes' + (mesesUsados.length !== 1 ? 'es' : '') + ' activos';
+
+    // 5. Bolsa mes a mes
+    const gastoMes = {};
+    casos.forEach(c => {
+      const mes = getStr(c, 'mes_entrega', 'mes');
+      gastoMes[mes] = (gastoMes[mes] || 0) + getNum(c, 'valor_entregado', 'valor');
+    });
+
     config.sort((a, b) => MES_ORDER.indexOf(a.mes) - MES_ORDER.indexOf(b.mes));
-    const rows = (config || []).map(m => {
+    let totalPresupuesto = 0, totalGastado = 0;
+    const bolsaRows = config.map(m => {
       const gastado = gastoMes[m.mes] || 0;
       const p = pct(gastado, m.monto_bolsa);
       totalPresupuesto += m.monto_bolsa;
@@ -879,8 +421,7 @@ new Chart(document.getElementById('chartRevenue'), {
 
     const totalPct = pct(totalGastado, totalPresupuesto);
     const totalColor = totalPct >= 90 ? '#B91C1C' : totalPct >= 70 ? '#92400E' : '#166534';
-
-    document.getElementById('bolsaMesRows').innerHTML = rows;
+    document.getElementById('bolsaMesRows').innerHTML = bolsaRows || '<div style="color:#9CA3AF;font-size:12px;padding:12px;">Sin datos de bolsa.</div>';
     document.getElementById('bolsaMesTotales').style.display = 'flex';
     document.getElementById('bolsaMesTotales').innerHTML = `
       <div style="display:flex;align-items:center;gap:12px;flex:1;flex-wrap:wrap;">
@@ -893,19 +434,203 @@ new Chart(document.getElementById('chartRevenue'), {
         <span style="width:52px;text-align:right;font-size:14px;font-weight:700;color:${totalColor};flex-shrink:0;">${totalPct.toFixed(0)}%</span>
       </div>`;
     document.getElementById('bolsaLastUpdate').textContent = 'Actualizado: ' + new Date().toLocaleString('es-CO');
+
+    // 6. Métodos de gestión
+    const metodosCount = {};
+    casos.forEach(c => {
+      const m = getStr(c, 'metodo', 'tipo_compensacion', 'que_hicimos', 'metodo_retencion') || 'Sin definir';
+      metodosCount[m] = (metodosCount[m] || 0) + 1;
+    });
+    const metodosData = Object.entries(metodosCount)
+      .sort((a, b) => b[1] - a[1])
+      .map(([label, count]) => ({ label: label.length > 18 ? label.slice(0, 17) + '…' : label, count, pct: Math.round(count / totalCasos * 100) }));
+    renderBars(document.getElementById('metodosBars'), metodosData, COLORS);
+    const sinCostoPct2 = Math.round(sinCosto.length / totalCasos * 100);
+    document.getElementById('notaMetodos').innerHTML = `<strong>${sinCostoPct2}% de los casos</strong> se resolvió desde la experiencia, sin necesidad de invertir de la bolsa.`;
+
+    // 7. Momentos de retención
+    const momentosCount = {};
+    casos.forEach(c => {
+      const m = getStr(c, 'momento', 'momento_retencion') || 'Sin definir';
+      momentosCount[m] = (momentosCount[m] || 0) + 1;
+    });
+    const momentosHtml = Object.entries(momentosCount)
+      .sort((a, b) => b[1] - a[1])
+      .map(([name, count]) => `
+        <div class="moment-row">
+          <span class="moment-name">${name}</span>
+          <span><span class="moment-count">${count}</span><span class="moment-pct"> ${Math.round(count / totalCasos * 100)}%</span></span>
+        </div>`).join('');
+    document.getElementById('momentoRows').innerHTML = momentosHtml || '<div style="color:#9CA3AF;font-size:12px;">Sin datos de momentos.</div>';
+    document.getElementById('notaMomentos').textContent = 'La gestión proactiva de fricciones tempranas evita que los clientes escalen a intención de retiro.';
+
+    // 8. Motivos
+    const motivosCount = {};
+    casos.forEach(c => {
+      const m = getStr(c, 'motivo', 'motivo_friccion', 'motivo_retencion') || 'Sin definir';
+      motivosCount[m] = (motivosCount[m] || 0) + 1;
+    });
+    const motivosData = Object.entries(motivosCount)
+      .sort((a, b) => b[1] - a[1])
+      .map(([label, count]) => ({ label: label.length > 18 ? label.slice(0, 17) + '…' : label, count, pct: Math.round(count / totalCasos * 100) }));
+    renderBars(document.getElementById('motivosBars'), motivosData, COLORS.slice(3));
+
+    // 9. Revenue por mes
+    const revenueMes = {};
+    casos.forEach(c => {
+      const mes = getStr(c, 'mes_entrega', 'mes');
+      const rev = getNum(c, 'revenue') || (clienteMap[c.company_id]?.revenue || 0);
+      revenueMes[mes] = (revenueMes[mes] || 0) + rev;
+    });
+    const mesesConRevenue = mesesUsados.filter(m => revenueMes[m] > 0);
+    const revLabels = mesesConRevenue.map(m => m.split('/')[0].slice(0, 3).charAt(0).toUpperCase() + m.split('/')[0].slice(1, 3));
+    const revValues = mesesConRevenue.map(m => revenueMes[m]);
+    if (revValues.some(v => v > 0)) {
+      renderRevenueChart('chartRevenue', revLabels, revValues);
+      renderRevenueChart('chartRevenue2', revLabels, revValues);
+    } else {
+      document.getElementById('chartRevenue').parentElement.innerHTML = '<div style="color:#9CA3AF;font-size:12px;text-align:center;padding:40px;">Revenue no disponible en los datos actuales.</div>';
+    }
+
+    // 10. Detalle por mes
+    const casosPorMes = {};
+    casos.forEach(c => {
+      const mes = getStr(c, 'mes_entrega', 'mes');
+      if (!casosPorMes[mes]) casosPorMes[mes] = [];
+      casosPorMes[mes].push(c);
+    });
+
+    const mesesOrdenados = Object.keys(casosPorMes).sort((a, b) => MES_ORDER.indexOf(a) - MES_ORDER.indexOf(b));
+    const mesesHtml = mesesOrdenados.map(mes => {
+      const lista = casosPorMes[mes];
+      const totalKwhMes = lista.reduce((s, c) => s + getNum(c, 'kwh_promedio', 'kwh') + (clienteMap[c.company_id]?.kwh || 0), 0);
+      const totalBolsaMes = lista.reduce((s, c) => s + getNum(c, 'valor_entregado', 'valor'), 0);
+      const mesLabel = mes.charAt(0).toUpperCase() + mes.slice(1).replace('/', ' ');
+      const badge = totalBolsaMes > 0
+        ? `<span class="month-badge-cost">${fmt(totalBolsaMes)} bolsa</span>`
+        : `<span class="month-badge-free">Sin costo</span>`;
+      const kwhStr = totalKwhMes >= 1000000 ? (totalKwhMes / 1000000).toFixed(2) + ' GWh' : Math.round(totalKwhMes).toLocaleString('es-CO') + ' kWh';
+
+      const rows = lista.map(c => {
+        const empresa = getStr(c, 'nombre_empresa', 'empresa', 'nombre_cliente', 'cliente');
+        const agente = getStr(c, 'concierge', 'agente', 'agente_nombre', 'nombre_agente');
+        const seg = getStr(c, 'segmento', 'segment');
+        const motivo = getStr(c, 'motivo', 'motivo_friccion');
+        const momento = getStr(c, 'momento', 'momento_retencion');
+        const metodo = getStr(c, 'metodo', 'tipo_compensacion', 'que_hicimos');
+        const kwh = getNum(c, 'kwh_promedio', 'kwh') || (clienteMap[c.company_id]?.kwh || 0);
+        const valor = getNum(c, 'valor_entregado', 'valor');
+        const bolsaCell = valor > 0
+          ? `<span class="cost-dot"></span><span style="color:#92400E;font-size:11px;">${fmt(valor)}</span>`
+          : `<span class="free-dot"></span><span style="font-size:11px;color:#166534;">Sin costo</span>`;
+        return `<tr>
+          <td><strong>${empresa}</strong></td>
+          <td>${agente}</td>
+          <td>${segTag(seg === '—' ? null : seg)}</td>
+          <td>${motivo}</td>
+          <td>${momento}</td>
+          <td><span class="method-pill ${methodClass(metodo === '—' ? null : metodo)}">${metodo}</span></td>
+          <td style="font-weight:600;">${kwh > 0 ? Math.round(kwh).toLocaleString('es-CO') : '—'}</td>
+          <td>${bolsaCell}</td>
+        </tr>`;
+      }).join('');
+
+      return `<div class="month-block">
+        <button class="month-toggle" onclick="toggleMonth(this)">
+          <span class="month-toggle-icon">▶</span>
+          <span class="month-toggle-label">${mesLabel}</span>
+          <span class="month-toggle-meta">${lista.length} caso${lista.length !== 1 ? 's' : ''} · ${kwhStr}</span>
+          ${badge}
+        </button>
+        <div class="month-panel">
+          <div class="month-inner">
+            <table class="cases-table">
+              <thead><tr><th>Cliente</th><th>Concierge</th><th>Seg.</th><th>Motivo</th><th>Momento</th><th>Qué hicimos</th><th>kWh/mes</th><th>Bolsa</th></tr></thead>
+              <tbody>${rows}</tbody>
+            </table>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+
+    document.getElementById('mesesContainer').innerHTML = mesesHtml || '<div style="color:#9CA3AF;padding:24px;text-align:center;font-size:13px;">No hay casos aprobados aún.</div>';
+
+    // 11. Revenue Hero
+    const totalRevenue = Object.values(revenueMes).reduce((s, v) => s + v, 0);
+    const totalCB = casos.reduce((s, c) => s + getNum(c, 'c_b') + (clienteMap[c.company_id]?.cb || 0), 0);
+    const takeRateAvg = totalRevenue > 0 && totalCB > 0 ? (totalCB / totalRevenue * 100).toFixed(1) : null;
+
+    document.getElementById('revenueHero').innerHTML = `
+      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+        <div>
+          <div style="font-size:10px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:0.09em;margin-bottom:8px;">Revenue protegido · ${labelRango}</div>
+          <div style="font-size:48px;font-weight:700;color:#fff;line-height:1;margin-bottom:6px;">${totalRevenue > 0 ? fmtM(totalRevenue) : '—'}</div>
+          <div style="font-size:13px;color:#9CA3AF;">en facturación protegida del churn · ${totalCasos} casos gestionados</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
+            <div style="font-size:22px;font-weight:700;color:#34C759;">${totalCB > 0 ? fmtM(totalCB) : '—'}</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">C+B total protegido</div>
+          </div>
+          <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
+            <div style="font-size:22px;font-weight:700;color:#5B3DF5;">${takeRateAvg ? takeRateAvg + '%' : '—'}</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">Take rate promedio</div>
+          </div>
+          <div style="background:#2A2A2A;border-radius:10px;padding:14px 18px;text-align:center;">
+            <div style="font-size:22px;font-weight:700;color:#FFB020;">${kwhLabel}</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">energía total retenida</div>
+          </div>
+        </div>
+      </div>`;
+
+    // 12. Take rate por cliente
+    const clienteTakeRate = {};
+    casos.forEach(c => {
+      const empresa = getStr(c, 'nombre_empresa', 'empresa', 'nombre_cliente', 'cliente');
+      const seg = getStr(c, 'segmento', 'segment');
+      const mes = getStr(c, 'mes_entrega', 'mes');
+      const rev = getNum(c, 'revenue') || (clienteMap[c.company_id]?.revenue || 0);
+      const cb = getNum(c, 'c_b') || (clienteMap[c.company_id]?.cb || 0);
+      const key = empresa + '__' + c.company_id;
+      if (!clienteTakeRate[key]) clienteTakeRate[key] = { empresa, seg, meses: [], revenue: 0, cb: 0 };
+      clienteTakeRate[key].revenue += rev;
+      clienteTakeRate[key].cb += cb;
+      if (!clienteTakeRate[key].meses.includes(mes)) clienteTakeRate[key].meses.push(mes);
+    });
+
+    const takeRateItems = Object.values(clienteTakeRate)
+      .filter(c => c.revenue > 0 && c.cb > 0)
+      .map(c => ({ ...c, tr: (c.cb / c.revenue * 100) }))
+      .sort((a, b) => b.tr - a.tr)
+      .slice(0, 6);
+
+    if (takeRateItems.length > 0) {
+      document.getElementById('takeRateGrid').innerHTML = takeRateItems.map(c => `
+        <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:12px;">
+          <div style="font-size:12px;font-weight:600;color:#1E1E1E;margin-bottom:2px;">${c.empresa}</div>
+          <div style="font-size:10px;color:#5C5C70;margin-bottom:6px;">${c.seg !== '—' ? c.seg + ' · ' : ''}${c.meses.map(m => m.split('/')[0].charAt(0).toUpperCase() + m.split('/')[0].slice(1, 3)).join(' + ')}</div>
+          <div style="font-size:20px;font-weight:700;color:#5B3DF5;">${c.tr.toFixed(1)}%</div>
+          <div style="font-size:10px;color:#9CA3AF;">take rate</div>
+        </div>`).join('') + `
+        <div style="background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;padding:12px;">
+          <div style="font-size:12px;font-weight:600;color:#166534;margin-bottom:2px;">Promedio portafolio retenido</div>
+          <div style="font-size:10px;color:#4ADE80;margin-bottom:6px;">todos los casos</div>
+          <div style="font-size:20px;font-weight:700;color:#166534;">${takeRateAvg ? takeRateAvg + '%' : '—'}</div>
+          <div style="font-size:10px;color:#4ADE80;">vs mercado regulado típico ~4–5%</div>
+        </div>`;
+      const top = takeRateItems[0];
+      document.getElementById('notaTakeRate').innerHTML = `El equipo no solo retuvo clientes — retuvo los de <strong>mayor margen</strong>. ${top.empresa} con ${top.tr.toFixed(1)}% de take rate representa más del doble del promedio del mercado regulado.`;
+    } else {
+      document.getElementById('takeRateGrid').innerHTML = '<div style="color:#9CA3AF;font-size:12px;">Take rate no disponible (faltan campos revenue y c_b en los casos).</div>';
+    }
+
   } catch (e) {
-    document.getElementById('bolsaMesRows').innerHTML = '<div style="color:#EF4444;font-size:12px;padding:12px;">Error al cargar datos. Verifica la conexión.</div>';
+    console.error(e);
+    document.querySelectorAll('.loading').forEach(el => {
+      el.innerHTML = '<div style="color:#EF4444;font-size:12px;">Error al cargar datos. Verifica la conexión con Supabase.</div>';
+    });
   }
 })();
-
-// ACCORDION
-function toggleMonth(btn) {
-  const panel = btn.nextElementSibling;
-  const icon = btn.querySelector('.month-toggle-icon');
-  const isOpen = panel.classList.contains('open');
-  panel.classList.toggle('open', !isOpen);
-  icon.classList.toggle('open', !isOpen);
-}
 </script>
 </body>
 </html>
